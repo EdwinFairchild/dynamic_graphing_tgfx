@@ -6,6 +6,13 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
+const uint16_t BITMAP_BACKGROUND_ID = 0;
+const uint16_t BITMAP_DASH_2_ID = 1;
+const uint16_t BITMAP_DASH_2_TEST_ID = 2;
+const uint16_t BITMAP_GAUGE_ID = 3;
+const uint16_t BITMAP_NEEDLE_ID = 4;
+const uint16_t BITMAP_SPEED_HIGHLIGHT_ID = 5;
+const uint16_t BITMAP_SWOOP_ID = 6;
 
 namespace BitmapDatabase
 {

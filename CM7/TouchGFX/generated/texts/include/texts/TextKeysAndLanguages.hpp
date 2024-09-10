@@ -12,8 +12,6 @@ enum LANGUAGES
 
 enum TEXTS
 {
-    T___SINGLEUSE_IUIL,
-    T___SINGLEUSE_98JP,
     NUMBER_OF_TEXT_KEYS
 };
 

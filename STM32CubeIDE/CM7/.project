@@ -712,6 +712,41 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_BACKGROUND.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_BACKGROUND.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dash_2.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_dash_2.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dash_2_test.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_dash_2_test.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_gauge.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gauge.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_needle.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_speed-highlight.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_speed-highlight.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_swoop.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_swoop.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/texts/src/LanguageGb.cpp</locationURI>

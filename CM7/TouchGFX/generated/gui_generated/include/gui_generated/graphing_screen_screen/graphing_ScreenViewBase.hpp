@@ -9,10 +9,12 @@
 #include <gui/graphing_screen_screen/graphing_ScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/graph/GraphScroll.hpp>
-#include <touchgfx/widgets/graph/GraphElements.hpp>
-#include <touchgfx/widgets/graph/GraphLabels.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/Gauge.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
 {
@@ -20,6 +22,14 @@ public:
     graphing_ScreenViewBase();
     virtual ~graphing_ScreenViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void buttonSpeed()
+    {
+        // Override and implement this function in graphing_Screen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -32,15 +42,11 @@ protected:
     touchgfx::Box __background;
     touchgfx::Container container1;
     touchgfx::Box box1;
-    touchgfx::Container container2;
     touchgfx::Box box2;
-    touchgfx::GraphScroll<100> dynamicGraph1;
-    touchgfx::GraphElementGridX dynamicGraph1MajorXAxisGrid;
-    touchgfx::GraphElementGridY dynamicGraph1MajorYAxisGrid;
-    touchgfx::GraphLabelsX dynamicGraph1MajorXAxisLabel;
-    touchgfx::GraphLabelsY dynamicGraph1MajorYAxisLabel;
-    touchgfx::GraphElementLine dynamicGraph1Line1;
-    touchgfx::PainterRGB888 dynamicGraph1Line1Painter;
+    touchgfx::MoveAnimator< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > flexButton1;
+    touchgfx::Image background;
+    touchgfx::Gauge gauge1;
+    touchgfx::PainterRGB888Bitmap gauge1Painter;
 
 private:
 
@@ -49,6 +55,16 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 12000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

@@ -24,111 +24,106 @@
             }
           },
           {
-            "Type": "Container",
-            "Name": "container2",
-            "X": 259,
-            "Y": 10,
-            "Width": 529,
-            "Height": 313,
-            "Components": [
+            "Type": "Box",
+            "Name": "box2",
+            "Width": 800,
+            "Height": 480
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 27,
+            "Y": 105,
+            "Width": 191,
+            "Height": 208,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
               {
-                "Type": "Box",
-                "Name": "box2",
-                "Width": 529,
-                "Height": 313,
-                "LockPosition": true,
-                "Color": {
-                  "Red": 49,
-                  "Green": 50,
-                  "Blue": 59
-                }
-              },
-              {
-                "Type": "DynamicGraph",
-                "Name": "dynamicGraph1",
-                "X": 17,
-                "Y": 17,
-                "Width": 494,
-                "Height": 279,
-                "LockPosition": true,
-                "DataSeed": 1365609020,
-                "NumberOfValues": 100,
-                "MaxY": 100.0,
-                "Precision": "1",
-                "LastIndex": 99,
-                "XAxisScale": 1.0,
-                "InsertRandomValues": true,
-                "LabelSizeBottom": 24,
-                "LabelSizeLeft": 32,
-                "PaddingTop": 10,
-                "PaddingBottom": 10,
-                "PaddingLeft": 10,
-                "GraphType": "GraphScroll",
-                "GraphDrawers": [
-                  {
-                    "Type": "LineDrawer",
-                    "LineWidth": 2,
-                    "FileNameImage": "",
-                    "Color": {
-                      "Red": 20,
-                      "Green": 151,
-                      "Blue": 197
-                    }
-                  }
-                ],
-                "XAxisGrid": {
-                  "Type": "GraphGrid",
-                  "Color": {
-                    "Red": 20,
-                    "Green": 151,
-                    "Blue": 197
-                  },
-                  "Interval": 10.0,
-                  "LineWidth": 1,
-                  "Alpha": 50
+                "Type": "BoxWithBorderButtonStyle",
+                "Height": 208,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
                 },
-                "YAxisGrid": {
-                  "Type": "GraphGrid",
-                  "Color": {
-                    "Red": 20,
-                    "Green": 151,
-                    "Blue": 197
-                  },
-                  "Interval": 10.0,
-                  "LineWidth": 1,
-                  "Alpha": 50
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
                 },
-                "XAxisLabel": {
-                  "Type": "GraphLabel",
-                  "Interval": 10.0,
-                  "DecimalSeparator": "Point",
-                  "TextColor": {
-                    "Red": 20,
-                    "Green": 151,
-                    "Blue": 197
-                  },
-                  "TextId": "__SingleUse_98JP",
-                  "TextRotation": "0",
-                  "Position": "Bottom"
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
                 },
-                "YAxisLabel": {
-                  "Type": "GraphLabel",
-                  "Interval": 10.0,
-                  "DecimalSeparator": "Point",
-                  "TextColor": {
-                    "Red": 20,
-                    "Green": 151,
-                    "Blue": 197
-                  },
-                  "TextId": "__SingleUse_IUIL",
-                  "TextRotation": "0",
-                  "Position": "Left"
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
                 }
               }
-            ]
+            ],
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "BACKGROUND.png"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "gauge1",
+            "X": 232,
+            "Y": -38,
+            "Width": 336,
+            "Height": 336,
+            "FileNameBackground": "gauge.png",
+            "BackgroundOffsetY": -45.0,
+            "RotationCenterX": 168.0,
+            "RotationCenterY": 168.0,
+            "StartAngle": -117.0,
+            "EndAngle": 121.0,
+            "RangeMax": 100.0,
+            "InitialValue": 50.0,
+            "Easing": "Linear",
+            "EasingOption": "In",
+            "FileNameNeedle": "needle.png",
+            "NeedleRotationCenterX": 10.0,
+            "NeedleRotationCenterY": 96.0,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "UseArc": true,
+            "FileNameArc": "swoop.png",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "SetArcPosition": true,
+            "ArcX": 33.0,
+            "ArcY": 33.0,
+            "ArcWidth": 270.0,
+            "ArcHeight": 198.0,
+            "ArcRadius": 137.0,
+            "ArcLineWidth": 136.0,
+            "ArcCapStyle": "Butt"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonSpeed"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
