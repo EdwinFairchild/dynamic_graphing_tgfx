@@ -76,7 +76,7 @@
             "Type": "Gauge",
             "Name": "gauge1",
             "X": 232,
-            "Y": -38,
+            "Y": -40,
             "Width": 336,
             "Height": 336,
             "FileNameBackground": "gauge.png",
@@ -85,6 +85,7 @@
             "RotationCenterY": 168.0,
             "StartAngle": -117.0,
             "EndAngle": 121.0,
+            "RangeMin": 10.0,
             "RangeMax": 100.0,
             "InitialValue": 50.0,
             "Easing": "Linear",
@@ -109,6 +110,55 @@
             "ArcRadius": 137.0,
             "ArcLineWidth": 136.0,
             "ArcCapStyle": "Butt"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "car",
+            "X": 272,
+            "Y": 275,
+            "Width": 256,
+            "Height": 144,
+            "FileNameFirst": "car_00.png",
+            "FileNameLast": "car_55.png",
+            "UpdateTicksInterval": 50,
+            "StartOnLoad": true
+          },
+          {
+            "Type": "Container",
+            "Name": "middle",
+            "X": 206,
+            "Y": 199,
+            "Width": 371,
+            "Height": 281,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "Image3",
+                "X": 12,
+                "Y": -111,
+                "Width": 169,
+                "Height": 392,
+                "RelativeFilename": "Vector 20.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "Image4",
+                "X": 222,
+                "Y": -108,
+                "Width": 152,
+                "Height": 389,
+                "RelativeFilename": "Vector 19.png"
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "Image5",
+            "X": 257,
+            "Y": 326,
+            "Width": 287,
+            "Height": 149,
+            "RelativeFilename": "Vector.png"
           }
         ],
         "Interactions": [

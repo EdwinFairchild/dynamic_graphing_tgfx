@@ -54,17 +54,24 @@ void graphing_ScreenView::handleTickEvent()
 {
 	tickCounter++;
     static int incr = 1;
+    static bool doOnce = true;
+      // this is just the intro
+      if(doOnce)
+      {
+  		if(incr < 100){
+  		gauge1.setValue(gauge1.getValue() + incr++);
 
-    if (gauge1.getValue() <= 0)
-    {
-        incr = +5;
-    }
-    else if (gauge1.getValue() >= 100)
-    {
-        incr = -5;
-    }
+  		}else
+  		{
+  			gauge1.setValue(gauge1.getValue() - 5);
+  			if(gauge1.getValue() < 5)
+  			{
+  				doOnce = false;
+  			}
+  		}
 
-    gauge1.setValue(gauge1.getValue() + incr);
+
+      }
    
     
 

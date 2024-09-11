@@ -15,6 +15,7 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
+#include <touchgfx/widgets/AnimatedImage.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
 {
@@ -47,6 +48,11 @@ protected:
     touchgfx::Image background;
     touchgfx::Gauge gauge1;
     touchgfx::PainterRGB888Bitmap gauge1Painter;
+    touchgfx::AnimatedImage car;
+    touchgfx::Container middle;
+    touchgfx::Image Image3;
+    touchgfx::Image Image4;
+    touchgfx::Image Image5;
 
 private:
 

@@ -39,10 +39,10 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
 
     gauge1.setBackground(touchgfx::Bitmap(BITMAP_GAUGE_ID));
     gauge1.setBackgroundOffset(0, -45);
-    gauge1.setPosition(232, -38, 336, 336);
+    gauge1.setPosition(232, -40, 336, 336);
     gauge1.setCenter(168, 168);
     gauge1.setStartEndAngle(-117, 121);
-    gauge1.setRange(0, 100);
+    gauge1.setRange(10, 100);
     gauge1.setValue(50);
     gauge1.setNeedle(BITMAP_NEEDLE_ID, 10, 96);
     gauge1.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
@@ -55,6 +55,27 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.getArc().setCapPrecision(180);
     gauge1.setArcPosition(33, 33, 270, 198);
     add(gauge1);
+
+    car.setXY(272, 275);
+    car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
+    car.setUpdateTicksInterval(3);
+    car.startAnimation(false, true, false);
+    add(car);
+
+    middle.setPosition(206, 199, 371, 281);
+    Image3.setXY(12, -111);
+    Image3.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
+    middle.add(Image3);
+
+    Image4.setXY(222, -108);
+    Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
+    middle.add(Image4);
+
+    add(middle);
+
+    Image5.setXY(257, 326);
+    Image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_ID));
+    add(Image5);
 }
 
 graphing_ScreenViewBase::~graphing_ScreenViewBase()
