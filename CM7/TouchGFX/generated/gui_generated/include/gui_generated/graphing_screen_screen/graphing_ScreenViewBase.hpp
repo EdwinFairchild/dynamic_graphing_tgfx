@@ -16,6 +16,7 @@
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 #include <touchgfx/widgets/AnimatedImage.hpp>
+#include <touchgfx/mixins/FadeAnimator.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
 {
@@ -23,11 +24,16 @@ public:
     graphing_ScreenViewBase();
     virtual ~graphing_ScreenViewBase();
     virtual void setupScreen();
+    virtual void transitionBegins();
 
     /*
      * Virtual Action Handlers
      */
     virtual void buttonSpeed()
+    {
+        // Override and implement this function in graphing_Screen
+    }
+    virtual void allVisibleDone()
     {
         // Override and implement this function in graphing_Screen
     }
@@ -45,14 +51,14 @@ protected:
     touchgfx::Box box1;
     touchgfx::Box box2;
     touchgfx::MoveAnimator< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > flexButton1;
-    touchgfx::Image background;
-    touchgfx::Gauge gauge1;
+    touchgfx::FadeAnimator< touchgfx::Image > background;
+    touchgfx::FadeAnimator< touchgfx::Gauge > gauge1;
     touchgfx::PainterRGB888Bitmap gauge1Painter;
-    touchgfx::AnimatedImage car;
     touchgfx::Container middle;
+    touchgfx::AnimatedImage car;
     touchgfx::Image Image3;
     touchgfx::Image Image4;
-    touchgfx::Image Image5;
+    touchgfx::FadeAnimator< touchgfx::Image > circle;
 
 private:
 
@@ -66,11 +72,17 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+    touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::AnimatedImage&> animationEndedCallback;
+    touchgfx::Callback < graphing_ScreenViewBase, const touchgfx::FadeAnimator<touchgfx::Gauge>& > interaction2EndedCallback;
+    touchgfx::Callback < graphing_ScreenViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& > interaction3EndedCallback;
 
     /*
      * Callback Handler Declarations
      */
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
+    void animationEndedCallbackHandler(const touchgfx::AnimatedImage& src);
+    void interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Gauge>& comp);
+    void interaction3EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
 
 };
 

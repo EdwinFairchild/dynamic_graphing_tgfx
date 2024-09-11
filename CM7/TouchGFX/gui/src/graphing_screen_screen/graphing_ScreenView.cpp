@@ -18,7 +18,7 @@ void graphing_ScreenView::tearDownScreen()
 
 void graphing_ScreenView::buttonSpeed()
    {
-      animate_speed_highLight = true;
+      
    }
 
 void graphing_ScreenView::rotateAroundCenter(int16_t current_x, int16_t currnet_y, float theta) {
@@ -49,29 +49,63 @@ void graphing_ScreenView::rotateAroundCenter(int16_t current_x, int16_t currnet_
     // SpeedBright.invalidate();
 }
 
+void graphing_ScreenView::allVisibleDone()
+{
+    doitOnce = true;
+}
+float graphing_ScreenView::map_float(float x, float in_min, float in_max, float out_min, float out_max) {
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
 
 void graphing_ScreenView::handleTickEvent()
 {
 	tickCounter++;
-    static int incr = 1;
+      //  static int incr = 1;
     static bool doOnce = true;
-      // this is just the intro
-      if(doOnce)
+    if(doOnce)
+    {
+        gauge1.setAlpha(0);
+        circle.setAlpha(0);
+        background.setAlpha(0);
+        doOnce = false;
+    }
+
+     if(doitOnce )
       {
-  		if(incr < 100){
-  		gauge1.setValue(gauge1.getValue() + incr++);
+        gauge1.setValue(map_float(60.0,0.0,100.0,16.0,92.0));
+  		// if(incr < 40){
+        //     gauge1.setValue(gauge1.getValue() +5);
+        //     incr++;
+  		// }else
+  		// {
+  		// 	gauge1.setValue(gauge1.getValue() - 5);
+  		// 	if(gauge1.getValue() < 5)
+  		// 	{
+  				doitOnce = false;
+  		// 	}
+  	 	// }
 
-  		}else
-  		{
-  			gauge1.setValue(gauge1.getValue() - 5);
-  			if(gauge1.getValue() < 5)
-  			{
-  				doOnce = false;
-  			}
-  		}
+
+       }
+    //   // this is just the intro
+     
+    //   if(doOnce && (tickCounter % 2 == 0) )
+    //   {
+  	// 	if(incr < 25){
+  	// 	gauge1.setValue(gauge1.getValue() +2);
+    //     incr++;
+
+  	// 	}else
+  	// 	{
+  	// 		gauge1.setValue(gauge1.getValue() - 5);
+  	// 		if(gauge1.getValue() < 5)
+  	// 		{
+  	// 			doOnce = false;
+  	// 		}
+  	// 	}
 
 
-      }
+    //   }
    
     
 

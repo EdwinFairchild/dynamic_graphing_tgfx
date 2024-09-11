@@ -17,7 +17,10 @@ public:
     virtual void handleTickEvent();
     virtual void rotateAroundCenter(int16_t current_x, int16_t currnet_y, float theta);
     uint32_t tickCounter;
-    bool animate_speed_highLight = false;
+    virtual void allVisibleDone();
+    virtual float map_float(float x, float in_min, float in_max, float out_min, float out_max) ;
+    bool doitOnce = false;
+ 
 
 protected:
 };

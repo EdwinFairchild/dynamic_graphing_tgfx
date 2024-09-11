@@ -87,7 +87,7 @@
             "EndAngle": 121.0,
             "RangeMin": 10.0,
             "RangeMax": 100.0,
-            "InitialValue": 50.0,
+            "InitialValue": 92.0,
             "Easing": "Linear",
             "EasingOption": "In",
             "FileNameNeedle": "needle.png",
@@ -112,18 +112,6 @@
             "ArcCapStyle": "Butt"
           },
           {
-            "Type": "AnimatedImage",
-            "Name": "car",
-            "X": 272,
-            "Y": 275,
-            "Width": 256,
-            "Height": 144,
-            "FileNameFirst": "car_00.png",
-            "FileNameLast": "car_55.png",
-            "UpdateTicksInterval": 50,
-            "StartOnLoad": true
-          },
-          {
             "Type": "Container",
             "Name": "middle",
             "X": 206,
@@ -131,6 +119,18 @@
             "Width": 371,
             "Height": 281,
             "Components": [
+              {
+                "Type": "AnimatedImage",
+                "Name": "car",
+                "X": 66,
+                "Y": 76,
+                "Width": 256,
+                "Height": 144,
+                "FileNameFirst": "car_00.png",
+                "FileNameLast": "car_55.png",
+                "UpdateTicksInterval": 40,
+                "StartOnLoad": true
+              },
               {
                 "Type": "Image",
                 "Name": "Image3",
@@ -148,17 +148,17 @@
                 "Width": 152,
                 "Height": 389,
                 "RelativeFilename": "Vector 19.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "circle",
+                "X": 51,
+                "Y": 127,
+                "Width": 287,
+                "Height": 149,
+                "RelativeFilename": "Vector.png"
               }
             ]
-          },
-          {
-            "Type": "Image",
-            "Name": "Image5",
-            "X": 257,
-            "Y": 326,
-            "Width": 287,
-            "Height": 149,
-            "RelativeFilename": "Vector.png"
           }
         ],
         "Interactions": [
@@ -171,6 +171,60 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "buttonSpeed"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerAnimationEnded",
+              "TriggerComponent": "car"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 500,
+              "ActionComponent": "gauge1"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction2"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 500,
+              "ActionComponent": "background"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 2500,
+              "ActionComponent": "circle"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "allVisibleDone"
             }
           }
         ]

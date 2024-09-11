@@ -7,7 +7,10 @@
 #include <images/BitmapDatabase.hpp>
 
 graphing_ScreenViewBase::graphing_ScreenViewBase() :
-    flexButtonCallback(this, &graphing_ScreenViewBase::flexButtonCallbackHandler)
+    flexButtonCallback(this, &graphing_ScreenViewBase::flexButtonCallbackHandler),
+    animationEndedCallback(this, &graphing_ScreenViewBase::animationEndedCallbackHandler),
+    interaction2EndedCallback(this, &graphing_ScreenViewBase::interaction2EndedCallbackHandler),
+    interaction3EndedCallback(this, &graphing_ScreenViewBase::interaction3EndedCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -43,7 +46,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setCenter(168, 168);
     gauge1.setStartEndAngle(-117, 121);
     gauge1.setRange(10, 100);
-    gauge1.setValue(50);
+    gauge1.setValue(92);
     gauge1.setNeedle(BITMAP_NEEDLE_ID, 10, 96);
     gauge1.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
@@ -56,13 +59,14 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setArcPosition(33, 33, 270, 198);
     add(gauge1);
 
-    car.setXY(272, 275);
-    car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
-    car.setUpdateTicksInterval(3);
-    car.startAnimation(false, true, false);
-    add(car);
-
     middle.setPosition(206, 199, 371, 281);
+    car.setXY(66, 76);
+    car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
+    car.setUpdateTicksInterval(2);
+    car.startAnimation(false, true, false);
+    car.setDoneAction(animationEndedCallback);
+    middle.add(car);
+
     Image3.setXY(12, -111);
     Image3.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
     middle.add(Image3);
@@ -71,11 +75,11 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
     middle.add(Image4);
 
-    add(middle);
+    circle.setXY(51, 127);
+    circle.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_ID));
+    middle.add(circle);
 
-    Image5.setXY(257, 326);
-    Image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_ID));
-    add(Image5);
+    add(middle);
 }
 
 graphing_ScreenViewBase::~graphing_ScreenViewBase()
@@ -85,7 +89,7 @@ graphing_ScreenViewBase::~graphing_ScreenViewBase()
 
 void graphing_ScreenViewBase::setupScreen()
 {
-
+    transitionBegins();
 }
 
 void graphing_ScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
@@ -97,4 +101,46 @@ void graphing_ScreenViewBase::flexButtonCallbackHandler(const touchgfx::Abstract
         //Call buttonSpeed
         buttonSpeed();
     }
+}
+
+void graphing_ScreenViewBase::animationEndedCallbackHandler(const touchgfx::AnimatedImage& src)
+{
+    if (&src == &car)
+    {
+        //Interaction2
+        //When car animation ended fade gauge1
+        //Fade gauge1 to alpha:255 with LinearIn easing in 500 ms (30 Ticks)
+        gauge1.clearFadeAnimationEndedAction();
+        gauge1.startFadeAnimation(255, 30, touchgfx::EasingEquations::linearEaseIn);
+        gauge1.setFadeAnimationEndedAction(interaction2EndedCallback);
+    }
+}
+
+void graphing_ScreenViewBase::interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Gauge>& comp)
+{
+    //Interaction3
+    //When Interaction2 completed fade background
+    //Fade background to alpha:255 with LinearIn easing in 500 ms (30 Ticks)
+    background.clearFadeAnimationEndedAction();
+    background.startFadeAnimation(255, 30, touchgfx::EasingEquations::linearEaseIn);
+    background.setFadeAnimationEndedAction(interaction3EndedCallback);
+
+}
+
+void graphing_ScreenViewBase::transitionBegins()
+{
+    //Interaction4
+    //When screen transition begins fade circle
+    //Fade circle to alpha:255 with LinearIn easing in 2500 ms (150 Ticks)
+    circle.clearFadeAnimationEndedAction();
+    circle.startFadeAnimation(255, 150, touchgfx::EasingEquations::linearEaseIn);
+}
+
+void graphing_ScreenViewBase::interaction3EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp)
+{
+    //Interaction5
+    //When Interaction3 completed call virtual function
+    //Call allVisibleDone
+    allVisibleDone();
+
 }
