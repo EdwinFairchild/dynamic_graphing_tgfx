@@ -9,13 +9,17 @@
 #include <gui/graphing_screen_screen/graphing_ScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/MoveAnimator.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
+#include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/widgets/AnimatedImage.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
+#include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
+#include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
@@ -29,11 +33,11 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void buttonSpeed()
+    virtual void allVisibleDone()
     {
         // Override and implement this function in graphing_Screen
     }
-    virtual void allVisibleDone()
+    virtual void sliderValueChanged(int value)
     {
         // Override and implement this function in graphing_Screen
     }
@@ -50,15 +54,40 @@ protected:
     touchgfx::Container container1;
     touchgfx::Box box1;
     touchgfx::Box box2;
-    touchgfx::MoveAnimator< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > flexButton1;
     touchgfx::FadeAnimator< touchgfx::Image > background;
     touchgfx::FadeAnimator< touchgfx::Gauge > gauge1;
     touchgfx::PainterRGB888Bitmap gauge1Painter;
-    touchgfx::Container middle;
+    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::Container car_container;
     touchgfx::AnimatedImage car;
     touchgfx::Image Image3;
     touchgfx::Image Image4;
     touchgfx::FadeAnimator< touchgfx::Image > circle;
+    touchgfx::TextArea mph_lable;
+    touchgfx::TextAreaWithOneWildcard mph;
+    touchgfx::Container tire_pres_pg;
+    touchgfx::Image tire_pre;
+    touchgfx::TextAreaWithOneWildcard pres_fl;
+    touchgfx::TextAreaWithOneWildcard pres_fr;
+    touchgfx::TextAreaWithOneWildcard pres_rr;
+    touchgfx::TextAreaWithOneWildcard pres_rl;
+    touchgfx::Slider slider1;
+    touchgfx::DigitalClock digitalClock1;
+    touchgfx::ImageProgress battery_level;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t MPH_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar mphBuffer[MPH_SIZE];
+    static const uint16_t PRES_FL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar pres_flBuffer[PRES_FL_SIZE];
+    static const uint16_t PRES_FR_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar pres_frBuffer[PRES_FR_SIZE];
+    static const uint16_t PRES_RR_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar pres_rrBuffer[PRES_RR_SIZE];
+    static const uint16_t PRES_RL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar pres_rlBuffer[PRES_RL_SIZE];
 
 private:
 
@@ -71,18 +100,18 @@ private:
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
     touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::AnimatedImage&> animationEndedCallback;
     touchgfx::Callback < graphing_ScreenViewBase, const touchgfx::FadeAnimator<touchgfx::Gauge>& > interaction2EndedCallback;
     touchgfx::Callback < graphing_ScreenViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& > interaction3EndedCallback;
+    touchgfx::Callback<graphing_ScreenViewBase, const touchgfx::Slider&, int> sliderValueChangedCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
     void animationEndedCallbackHandler(const touchgfx::AnimatedImage& src);
     void interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Gauge>& comp);
     void interaction3EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
+    void sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value);
 
 };
 

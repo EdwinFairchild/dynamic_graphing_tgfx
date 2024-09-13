@@ -5,12 +5,13 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 graphing_ScreenViewBase::graphing_ScreenViewBase() :
-    flexButtonCallback(this, &graphing_ScreenViewBase::flexButtonCallbackHandler),
     animationEndedCallback(this, &graphing_ScreenViewBase::animationEndedCallbackHandler),
     interaction2EndedCallback(this, &graphing_ScreenViewBase::interaction2EndedCallbackHandler),
-    interaction3EndedCallback(this, &graphing_ScreenViewBase::interaction3EndedCallbackHandler)
+    interaction3EndedCallback(this, &graphing_ScreenViewBase::interaction3EndedCallbackHandler),
+    sliderValueChangedCallback(this, &graphing_ScreenViewBase::sliderValueChangedCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -29,25 +30,18 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     box2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box2);
 
-    flexButton1.setBoxWithBorderPosition(0, 0, 0, 208);
-    flexButton1.setBorderSize(5);
-    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    flexButton1.setAction(flexButtonCallback);
-    flexButton1.setPosition(27, 105, 191, 208);
-    add(flexButton1);
-
-    background.setXY(0, 0);
+    background.setXY(-2, 0);
     background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
     add(background);
 
     gauge1.setBackground(touchgfx::Bitmap(BITMAP_GAUGE_ID));
     gauge1.setBackgroundOffset(0, -45);
-    gauge1.setPosition(232, -40, 336, 336);
+    gauge1.setPosition(234, -8, 336, 336);
     gauge1.setCenter(168, 168);
     gauge1.setStartEndAngle(-117, 121);
     gauge1.setRange(10, 100);
     gauge1.setValue(92);
-    gauge1.setNeedle(BITMAP_NEEDLE_ID, 10, 96);
+    gauge1.setNeedle(BITMAP_NEEDLE_2_ID, 19.3f, 103.1f);
     gauge1.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setArcVisible();
@@ -59,27 +53,121 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setArcPosition(33, 33, 270, 198);
     add(gauge1);
 
-    middle.setPosition(206, 199, 371, 281);
-    car.setXY(66, 76);
+    swipeContainer1.setXY(216, 135);
+    swipeContainer1.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID), touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID));
+    swipeContainer1.setPageIndicatorXY(0, 0);
+    swipeContainer1.setSwipeCutoff(50);
+    swipeContainer1.setEndSwipeElasticWidth(50);
+
+    car_container.setWidth(364);
+    car_container.setHeight(347);
+    car.setXY(54, 174);
     car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
     car.setUpdateTicksInterval(2);
     car.startAnimation(false, true, false);
     car.setDoneAction(animationEndedCallback);
-    middle.add(car);
+    car_container.add(car);
 
-    Image3.setXY(12, -111);
+    Image3.setXY(-2, -46);
     Image3.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
-    middle.add(Image3);
+    car_container.add(Image3);
 
-    Image4.setXY(222, -108);
+    Image4.setXY(220, -37);
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
-    middle.add(Image4);
+    car_container.add(Image4);
 
-    circle.setXY(51, 127);
+    circle.setXY(43, 172);
     circle.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_ID));
-    middle.add(circle);
+    car_container.add(circle);
 
-    add(middle);
+    mph_lable.setPosition(109, 121, 151, 28);
+    mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
+    mph_lable.setLinespacing(0);
+    mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
+    car_container.add(mph_lable);
+
+    mph.setPosition(109, 50, 151, 64);
+    mph.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
+    mph.setLinespacing(0);
+    Unicode::snprintf(mphBuffer, MPH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_49UH).getText());
+    mph.setWildcard(mphBuffer);
+    mph.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UE0S));
+    car_container.add(mph);
+
+    swipeContainer1.add(car_container);
+
+    tire_pres_pg.setWidth(364);
+    tire_pres_pg.setHeight(347);
+    tire_pre.setXY(4, -1);
+    tire_pre.setBitmap(touchgfx::Bitmap(BITMAP_TIRE_PRESSURE_1_ID));
+    tire_pres_pg.add(tire_pre);
+
+    pres_fl.setXY(96, 97);
+    pres_fl.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    pres_fl.setLinespacing(0);
+    Unicode::snprintf(pres_flBuffer, PRES_FL_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_P78H).getText());
+    pres_fl.setWildcard(pres_flBuffer);
+    pres_fl.resizeToCurrentText();
+    pres_fl.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ED0G));
+    tire_pres_pg.add(pres_fl);
+
+    pres_fr.setXY(247, 97);
+    pres_fr.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
+    pres_fr.setLinespacing(0);
+    Unicode::snprintf(pres_frBuffer, PRES_FR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ONR6).getText());
+    pres_fr.setWildcard(pres_frBuffer);
+    pres_fr.resizeToCurrentText();
+    pres_fr.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4JZO));
+    tire_pres_pg.add(pres_fr);
+
+    pres_rr.setXY(247, 228);
+    pres_rr.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
+    pres_rr.setLinespacing(0);
+    Unicode::snprintf(pres_rrBuffer, PRES_RR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DATJ).getText());
+    pres_rr.setWildcard(pres_rrBuffer);
+    pres_rr.resizeToCurrentText();
+    pres_rr.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BWD6));
+    tire_pres_pg.add(pres_rr);
+
+    pres_rl.setXY(96, 228);
+    pres_rl.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
+    pres_rl.setLinespacing(0);
+    Unicode::snprintf(pres_rlBuffer, PRES_RL_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_JSZ2).getText());
+    pres_rl.setWildcard(pres_rlBuffer);
+    pres_rl.resizeToCurrentText();
+    pres_rl.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9P52));
+    tire_pres_pg.add(pres_rl);
+
+    swipeContainer1.add(tire_pres_pg);
+
+    swipeContainer1.setSelectedPage(0);
+    add(swipeContainer1);
+
+    slider1.setXY(580, 450);
+    slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
+    slider1.setupHorizontalSlider(16, 11, 0, 0, 200);
+    slider1.setValueRange(0, 200);
+    slider1.setValue(0);
+    slider1.setNewValueCallback(sliderValueChangedCallback);
+    add(slider1);
+
+    digitalClock1.setPosition(277, 10, 250, 30);
+    digitalClock1.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
+    digitalClock1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9ZRH));
+    digitalClock1.displayLeadingZeroForHourIndicator(true);
+    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_12_HOUR_NO_SECONDS);
+    digitalClock1.setTime12Hour(10, 10, 0, true);
+    add(digitalClock1);
+
+    battery_level.setXY(635, -8);
+    battery_level.setProgressIndicatorPosition(0, 0, 163, 388);
+    battery_level.setRange(0, 100);
+    battery_level.setDirection(touchgfx::AbstractDirectionProgress::UP);
+    battery_level.setBackground(touchgfx::Bitmap(BITMAP_BATTERY_BG_ID));
+    battery_level.setBitmap(BITMAP_BATTERY_FILL_ID);
+    battery_level.setValue(60);
+    battery_level.setAnchorAtZero(true);
+    add(battery_level);
 }
 
 graphing_ScreenViewBase::~graphing_ScreenViewBase()
@@ -92,17 +180,6 @@ void graphing_ScreenViewBase::setupScreen()
     transitionBegins();
 }
 
-void graphing_ScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
-{
-    if (&src == &flexButton1)
-    {
-        //Interaction1
-        //When flexButton1 clicked call virtual function
-        //Call buttonSpeed
-        buttonSpeed();
-    }
-}
-
 void graphing_ScreenViewBase::animationEndedCallbackHandler(const touchgfx::AnimatedImage& src)
 {
     if (&src == &car)
@@ -113,6 +190,17 @@ void graphing_ScreenViewBase::animationEndedCallbackHandler(const touchgfx::Anim
         gauge1.clearFadeAnimationEndedAction();
         gauge1.startFadeAnimation(255, 30, touchgfx::EasingEquations::linearEaseIn);
         gauge1.setFadeAnimationEndedAction(interaction2EndedCallback);
+    }
+}
+
+void graphing_ScreenViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &slider1)
+    {
+        //Interaction7
+        //When slider1 value changed call virtual function
+        //Call sliderValueChanged
+        sliderValueChanged(value);
     }
 }
 

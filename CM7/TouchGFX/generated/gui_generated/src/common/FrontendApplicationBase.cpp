@@ -9,6 +9,8 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD24bpp.hpp>
+#include <gui/screen1_screen/Screen1View.hpp>
+#include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/graphing_screen_screen/graphing_ScreenView.hpp>
 #include <gui/graphing_screen_screen/graphing_ScreenPresenter.hpp>
 
@@ -21,6 +23,7 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
       model(m)
 {
     touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
+    touchgfx::Texts::setLanguage(GB);
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableDecompressorRGB();
@@ -30,15 +33,28 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// graphing_Screen
+// Screen1
 
-void FrontendApplicationBase::gotographing_ScreenScreenNoTransition()
+void FrontendApplicationBase::gotoScreen1ScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotographing_ScreenScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotographing_ScreenScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<graphing_ScreenView, graphing_ScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// graphing_Screen
+
+void FrontendApplicationBase::gotographing_ScreenScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotographing_ScreenScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotographing_ScreenScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<graphing_ScreenView, graphing_ScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

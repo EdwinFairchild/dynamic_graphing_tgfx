@@ -2,6 +2,54 @@
   "Application": {
     "Screens": [
       {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 800,
+            "Height": 480
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 215,
+            "Y": 190,
+            "Width": 370,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_large_round_inactive.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_large_round_inactive.png",
+            "TextId": "__SingleUse_20XD",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "graphing_Screen"
+            }
+          }
+        ]
+      },
+      {
         "Name": "graphing_Screen",
         "CanvasBufferSize": 12000,
         "Components": [
@@ -30,53 +78,19 @@
             "Height": 480
           },
           {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
-            "X": 27,
-            "Y": 105,
-            "Width": 191,
-            "Height": 208,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Height": 208,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ],
-            "Moveable": true
-          },
-          {
             "Type": "Image",
             "Name": "background",
+            "X": -2,
             "Width": 800,
             "Height": 480,
+            "LockPosition": true,
             "RelativeFilename": "BACKGROUND.png"
           },
           {
             "Type": "Gauge",
             "Name": "gauge1",
-            "X": 232,
-            "Y": -40,
+            "X": 234,
+            "Y": -8,
             "Width": 336,
             "Height": 336,
             "FileNameBackground": "gauge.png",
@@ -90,9 +104,9 @@
             "InitialValue": 92.0,
             "Easing": "Linear",
             "EasingOption": "In",
-            "FileNameNeedle": "needle.png",
-            "NeedleRotationCenterX": 10.0,
-            "NeedleRotationCenterY": 96.0,
+            "FileNameNeedle": "needle_2.png",
+            "NeedleRotationCenterX": 19.3,
+            "NeedleRotationCenterY": 103.1,
             "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
             "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
             "UseArc": true,
@@ -112,67 +126,255 @@
             "ArcCapStyle": "Butt"
           },
           {
-            "Type": "Container",
-            "Name": "middle",
-            "X": 206,
-            "Y": 199,
-            "Width": 371,
-            "Height": 281,
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer1",
+            "X": 216,
+            "Y": 135,
+            "Width": 364,
+            "Height": 347,
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "IndicatorImageNormal": "swipe_container_pager.png",
+            "IndicatorImageHighlight": "swipe_container_pager.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "car_container",
             "Components": [
               {
-                "Type": "AnimatedImage",
-                "Name": "car",
-                "X": 66,
-                "Y": 76,
-                "Width": 256,
-                "Height": 144,
-                "FileNameFirst": "car_00.png",
-                "FileNameLast": "car_55.png",
-                "UpdateTicksInterval": 40,
-                "StartOnLoad": true
+                "Type": "Container",
+                "Name": "car_container",
+                "Y": 21,
+                "Width": 364,
+                "Height": 347,
+                "Components": [
+                  {
+                    "Type": "AnimatedImage",
+                    "Name": "car",
+                    "X": 54,
+                    "Y": 174,
+                    "Width": 256,
+                    "Height": 144,
+                    "FileNameFirst": "car_00.png",
+                    "FileNameLast": "car_55.png",
+                    "UpdateTicksInterval": 40,
+                    "StartOnLoad": true
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "Image3",
+                    "X": -2,
+                    "Y": -46,
+                    "Width": 169,
+                    "Height": 392,
+                    "RelativeFilename": "Vector 20.png"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "Image4",
+                    "X": 220,
+                    "Y": -37,
+                    "Width": 152,
+                    "Height": 389,
+                    "RelativeFilename": "Vector 19.png"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "circle",
+                    "X": 43,
+                    "Y": 172,
+                    "Width": 287,
+                    "Height": 149,
+                    "RelativeFilename": "Vector.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "mph_lable",
+                    "X": 109,
+                    "Y": 121,
+                    "Width": 151,
+                    "Height": 28,
+                    "TextId": "__SingleUse_Z0UY",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 102,
+                      "Green": 102,
+                      "Blue": 102
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "mph",
+                    "X": 109,
+                    "Y": 50,
+                    "Width": 151,
+                    "Height": 64,
+                    "TextId": "__SingleUse_UE0S",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 102,
+                      "Green": 102,
+                      "Blue": 102
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_49UH",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "Image",
-                "Name": "Image3",
-                "X": 12,
-                "Y": -111,
-                "Width": 169,
-                "Height": 392,
-                "RelativeFilename": "Vector 20.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "Image4",
-                "X": 222,
-                "Y": -108,
-                "Width": 152,
-                "Height": 389,
-                "RelativeFilename": "Vector 19.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "circle",
-                "X": 51,
-                "Y": 127,
-                "Width": 287,
-                "Height": 149,
-                "RelativeFilename": "Vector.png"
+                "Type": "Container",
+                "Name": "tire_pres_pg",
+                "Width": 364,
+                "Height": 347,
+                "Components": [
+                  {
+                    "Type": "Image",
+                    "Name": "tire_pre",
+                    "X": 4,
+                    "Y": -1,
+                    "Width": 364,
+                    "Height": 323,
+                    "RelativeFilename": "tire_pressure_1.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "pres_fl",
+                    "X": 96,
+                    "Y": 97,
+                    "Width": 26,
+                    "Height": 20,
+                    "TextId": "__SingleUse_ED0G",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_P78H",
+                      "UseBuffer": true,
+                      "BufferSize": 3
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "pres_fr",
+                    "X": 247,
+                    "Y": 97,
+                    "Width": 26,
+                    "Height": 20,
+                    "TextId": "__SingleUse_4JZO",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 76,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_ONR6",
+                      "UseBuffer": true,
+                      "BufferSize": 3
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "pres_rr",
+                    "X": 247,
+                    "Y": 228,
+                    "Width": 26,
+                    "Height": 20,
+                    "TextId": "__SingleUse_BWD6",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 76,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_DATJ",
+                      "UseBuffer": true,
+                      "BufferSize": 3
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "pres_rl",
+                    "X": 96,
+                    "Y": 228,
+                    "Width": 26,
+                    "Height": 20,
+                    "TextId": "__SingleUse_9P52",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 76,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_JSZ2",
+                      "UseBuffer": true,
+                      "BufferSize": 3
+                    }
+                  }
+                ]
               }
             ]
+          },
+          {
+            "Type": "Slider",
+            "Name": "slider1",
+            "X": 580,
+            "Y": 450,
+            "Width": 232,
+            "Height": 32,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_track_small.png",
+            "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_track_small.png",
+            "Indicator": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_round_light.png",
+            "BackgroundX": 16,
+            "BackgroundY": 11,
+            "IndicatorMax": 200,
+            "ValueMax": 200
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 277,
+            "Y": 10,
+            "Width": 250,
+            "Height": 30,
+            "TextColor": {
+              "Red": 102,
+              "Green": 102,
+              "Blue": 102
+            },
+            "TextId": "__SingleUse_9ZRH",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "UseAmPm": true,
+            "InitialHour": 10,
+            "InitialMinute": 10
+          },
+          {
+            "Type": "ImageProgress",
+            "Name": "battery_level",
+            "X": 635,
+            "Y": -8,
+            "Width": 163,
+            "Height": 388,
+            "FileNameProgress": "battery_fill.png",
+            "AnchorAtZero": true,
+            "Direction": "Up",
+            "FileNameBackground": "battery_bg.png",
+            "IndicatorPositionWidth": 163,
+            "IndicatorPositionHeight": 388,
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 60
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton1"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonSpeed"
-            }
-          },
           {
             "InteractionName": "Interaction2",
             "HasCompletedTrigger": true,
@@ -226,6 +428,27 @@
               "Type": "ActionCustom",
               "FunctionName": "allVisibleDone"
             }
+          },
+          {
+            "InteractionName": "Interaction6",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_gas_clicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction7",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "slider1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "sliderValueChanged"
+            }
           }
         ]
       }
@@ -237,7 +460,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "graphing_Screen",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

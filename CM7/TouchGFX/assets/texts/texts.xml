@@ -5,11 +5,52 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
-    <TextGroup Id="Unsorted" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_9ZRH" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z0UY" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">MPH</Translation>
+      </Text>
+      <Text Id="__SingleUse_49UH" Alignment="Left" TypographyId="MPH">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_UE0S" Alignment="Center" TypographyId="MPH">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DATJ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">40</Translation>
+      </Text>
+      <Text Id="__SingleUse_JSZ2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">40</Translation>
+      </Text>
+      <Text Id="__SingleUse_ONR6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">40</Translation>
+      </Text>
+      <Text Id="__SingleUse_P78H" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">32</Translation>
+      </Text>
+      <Text Id="__SingleUse_9P52" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BWD6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4JZO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ED0G" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_20XD" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Start</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="13" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="verdana.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="MPH" Font="verdana.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

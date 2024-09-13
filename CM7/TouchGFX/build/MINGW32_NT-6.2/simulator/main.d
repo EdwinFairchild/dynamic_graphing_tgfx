@@ -64,40 +64,27 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/gui/graphing_screen_screen/graphing_ScreenView.hpp \
- generated/gui_generated/include/gui_generated/graphing_screen_screen/graphing_ScreenViewBase.hpp \
+ gui/include/gui/screen1_screen/Screen1View.hpp \
+ generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- gui/include/gui/graphing_screen_screen/graphing_ScreenPresenter.hpp \
+ gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ gui/include/gui/graphing_screen_screen/graphing_ScreenView.hpp \
+ generated/gui_generated/include/gui_generated/graphing_screen_screen/graphing_ScreenViewBase.hpp \
+ gui/include/gui/graphing_screen_screen/graphing_ScreenPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
@@ -114,7 +101,19 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterBitmap.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -249,6 +248,10 @@ generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
 gui/include/gui/common/FrontendApplication.hpp:
 
 generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -261,61 +264,31 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/graphing_screen_screen/graphing_ScreenView.hpp:
+gui/include/gui/screen1_screen/Screen1View.hpp:
 
-generated/gui_generated/include/gui_generated/graphing_screen_screen/graphing_ScreenViewBase.hpp:
+generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-gui/include/gui/graphing_screen_screen/graphing_ScreenPresenter.hpp:
+gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
+gui/include/gui/graphing_screen_screen/graphing_ScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/graphing_screen_screen/graphing_ScreenViewBase.hpp:
+
+gui/include/gui/graphing_screen_screen/graphing_ScreenPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp:
 
@@ -349,7 +322,31 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 
