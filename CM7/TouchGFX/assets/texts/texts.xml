@@ -6,6 +6,12 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_QW5T" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">75</Translation>
+      </Text>
+      <Text Id="__SingleUse_3MX6" Alignment="Right" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_9ZRH" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
@@ -43,14 +49,14 @@
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_20XD" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Start</Translation>
+        <Translation Language="GB">Push To Start</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0-9" />
-    <Typography Id="Large" Font="verdana.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="41" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="MPH" Font="verdana.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="MPH" Font="verdana.ttf" Size="85" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

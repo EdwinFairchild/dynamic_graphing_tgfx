@@ -19,7 +19,9 @@
 #include <touchgfx/containers/Slider.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
+#include <gui/containers/right_container.hpp>
 #include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
@@ -28,12 +30,11 @@ public:
     graphing_ScreenViewBase();
     virtual ~graphing_ScreenViewBase();
     virtual void setupScreen();
-    virtual void transitionBegins();
 
     /*
      * Virtual Action Handlers
      */
-    virtual void allVisibleDone()
+    virtual void backGroundAnimationDone()
     {
         // Override and implement this function in graphing_Screen
     }
@@ -60,9 +61,8 @@ protected:
     touchgfx::SwipeContainer swipeContainer1;
     touchgfx::Container car_container;
     touchgfx::AnimatedImage car;
-    touchgfx::Image Image3;
     touchgfx::Image Image4;
-    touchgfx::FadeAnimator< touchgfx::Image > circle;
+    touchgfx::Image image5;
     touchgfx::TextArea mph_lable;
     touchgfx::TextAreaWithOneWildcard mph;
     touchgfx::Container tire_pres_pg;
@@ -74,6 +74,8 @@ protected:
     touchgfx::Slider slider1;
     touchgfx::DigitalClock digitalClock1;
     touchgfx::ImageProgress battery_level;
+    right_container right_container1;
+    touchgfx::FadeAnimator< touchgfx::MoveAnimator< touchgfx::Image > > circle;
 
     /*
      * Wildcard Buffers

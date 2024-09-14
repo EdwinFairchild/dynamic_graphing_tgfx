@@ -68,25 +68,21 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     car.setDoneAction(animationEndedCallback);
     car_container.add(car);
 
-    Image3.setXY(-2, -46);
-    Image3.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
-    car_container.add(Image3);
-
     Image4.setXY(220, -37);
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
     car_container.add(Image4);
 
-    circle.setXY(43, 172);
-    circle.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_ID));
-    car_container.add(circle);
+    image5.setXY(6, -70);
+    image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
+    car_container.add(image5);
 
-    mph_lable.setPosition(109, 121, 151, 28);
+    mph_lable.setPosition(111, 129, 151, 28);
     mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph_lable.setLinespacing(0);
     mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
     car_container.add(mph_lable);
 
-    mph.setPosition(109, 50, 151, 64);
+    mph.setPosition(109, 34, 151, 85);
     mph.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph.setLinespacing(0);
     Unicode::snprintf(mphBuffer, MPH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_49UH).getText());
@@ -168,6 +164,13 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     battery_level.setValue(60);
     battery_level.setAnchorAtZero(true);
     add(battery_level);
+
+    right_container1.setXY(-4, -11);
+    add(right_container1);
+
+    circle.setXY(270, 308);
+    circle.setBitmap(touchgfx::Bitmap(BITMAP_CIRCLE_ID));
+    add(circle);
 }
 
 graphing_ScreenViewBase::~graphing_ScreenViewBase()
@@ -177,7 +180,7 @@ graphing_ScreenViewBase::~graphing_ScreenViewBase()
 
 void graphing_ScreenViewBase::setupScreen()
 {
-    transitionBegins();
+    right_container1.initialize();
 }
 
 void graphing_ScreenViewBase::animationEndedCallbackHandler(const touchgfx::AnimatedImage& src)
@@ -208,27 +211,18 @@ void graphing_ScreenViewBase::interaction2EndedCallbackHandler(const touchgfx::F
 {
     //Interaction3
     //When Interaction2 completed fade background
-    //Fade background to alpha:255 with LinearIn easing in 500 ms (30 Ticks)
+    //Fade background to alpha:255 with LinearIn easing in 250 ms (15 Ticks)
     background.clearFadeAnimationEndedAction();
-    background.startFadeAnimation(255, 30, touchgfx::EasingEquations::linearEaseIn);
+    background.startFadeAnimation(255, 15, touchgfx::EasingEquations::linearEaseIn);
     background.setFadeAnimationEndedAction(interaction3EndedCallback);
 
-}
-
-void graphing_ScreenViewBase::transitionBegins()
-{
-    //Interaction4
-    //When screen transition begins fade circle
-    //Fade circle to alpha:255 with LinearIn easing in 2500 ms (150 Ticks)
-    circle.clearFadeAnimationEndedAction();
-    circle.startFadeAnimation(255, 150, touchgfx::EasingEquations::linearEaseIn);
 }
 
 void graphing_ScreenViewBase::interaction3EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp)
 {
     //Interaction5
     //When Interaction3 completed call virtual function
-    //Call allVisibleDone
-    allVisibleDone();
+    //Call backGroundAnimationDone
+    backGroundAnimationDone();
 
 }

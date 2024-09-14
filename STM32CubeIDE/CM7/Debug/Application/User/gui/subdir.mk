@@ -10,7 +10,8 @@ D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/model/Model.cpp \
 D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp \
 D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp \
 D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/graphing_screen_screen/graphing_ScreenPresenter.cpp \
-D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/graphing_screen_screen/graphing_ScreenView.cpp 
+D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/graphing_screen_screen/graphing_ScreenView.cpp \
+D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/containers/right_container.cpp 
 
 OBJS += \
 ./Application/User/gui/FrontendApplication.o \
@@ -18,7 +19,8 @@ OBJS += \
 ./Application/User/gui/Screen1Presenter.o \
 ./Application/User/gui/Screen1View.o \
 ./Application/User/gui/graphing_ScreenPresenter.o \
-./Application/User/gui/graphing_ScreenView.o 
+./Application/User/gui/graphing_ScreenView.o \
+./Application/User/gui/right_container.o 
 
 CPP_DEPS += \
 ./Application/User/gui/FrontendApplication.d \
@@ -26,7 +28,8 @@ CPP_DEPS += \
 ./Application/User/gui/Screen1Presenter.d \
 ./Application/User/gui/Screen1View.d \
 ./Application/User/gui/graphing_ScreenPresenter.d \
-./Application/User/gui/graphing_ScreenView.d 
+./Application/User/gui/graphing_ScreenView.d \
+./Application/User/gui/right_container.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -42,11 +45,13 @@ Application/User/gui/graphing_ScreenPresenter.o: D:/Projects/GFX/dynamic_graphin
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DUSE_BPP=24 -DSTM32H747xx -c -I../../../CM7/Core/Inc -I../../../CM7/TouchGFX/App -I../../../CM7/TouchGFX/target/generated -I../../../CM7/TouchGFX/target -I../../../Drivers/BSP/Components/Common -I../../../Drivers/BSP/STM32H747I-Discovery -I../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/Components -I../../../CM7/LIBJPEG/App -I../../../CM7/LIBJPEG/Target -I../../../Utilities/JPEG -I../../../Middlewares/Third_Party/LibJPEG/include -I../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include -I../../CM7/../../CM7/TouchGFX/generated/fonts/include -I../../CM7/../../CM7/TouchGFX/generated/gui_generated/include -I../../CM7/../../CM7/TouchGFX/generated/images/include -I../../CM7/../../CM7/TouchGFX/generated/texts/include -I../../CM7/../../CM7/TouchGFX/generated/videos/include -I../../CM7/../../CM7/TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "$@"
 Application/User/gui/graphing_ScreenView.o: D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/graphing_screen_screen/graphing_ScreenView.cpp Application/User/gui/subdir.mk
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DUSE_BPP=24 -DSTM32H747xx -c -I../../../CM7/Core/Inc -I../../../CM7/TouchGFX/App -I../../../CM7/TouchGFX/target/generated -I../../../CM7/TouchGFX/target -I../../../Drivers/BSP/Components/Common -I../../../Drivers/BSP/STM32H747I-Discovery -I../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/Components -I../../../CM7/LIBJPEG/App -I../../../CM7/LIBJPEG/Target -I../../../Utilities/JPEG -I../../../Middlewares/Third_Party/LibJPEG/include -I../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include -I../../CM7/../../CM7/TouchGFX/generated/fonts/include -I../../CM7/../../CM7/TouchGFX/generated/gui_generated/include -I../../CM7/../../CM7/TouchGFX/generated/images/include -I../../CM7/../../CM7/TouchGFX/generated/texts/include -I../../CM7/../../CM7/TouchGFX/generated/videos/include -I../../CM7/../../CM7/TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "$@"
+Application/User/gui/right_container.o: D:/Projects/GFX/dynamic_graphing/CM7/TouchGFX/gui/src/containers/right_container.cpp Application/User/gui/subdir.mk
+	arm-none-eabi-g++ "$<" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DUSE_BPP=24 -DSTM32H747xx -c -I../../../CM7/Core/Inc -I../../../CM7/TouchGFX/App -I../../../CM7/TouchGFX/target/generated -I../../../CM7/TouchGFX/target -I../../../Drivers/BSP/Components/Common -I../../../Drivers/BSP/STM32H747I-Discovery -I../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/Components -I../../../CM7/LIBJPEG/App -I../../../CM7/LIBJPEG/Target -I../../../Utilities/JPEG -I../../../Middlewares/Third_Party/LibJPEG/include -I../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include -I../../CM7/../../CM7/TouchGFX/generated/fonts/include -I../../CM7/../../CM7/TouchGFX/generated/gui_generated/include -I../../CM7/../../CM7/TouchGFX/generated/images/include -I../../CM7/../../CM7/TouchGFX/generated/texts/include -I../../CM7/../../CM7/TouchGFX/generated/videos/include -I../../CM7/../../CM7/TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Application-2f-User-2f-gui
 
 clean-Application-2f-User-2f-gui:
-	-$(RM) ./Application/User/gui/FrontendApplication.cyclo ./Application/User/gui/FrontendApplication.d ./Application/User/gui/FrontendApplication.o ./Application/User/gui/FrontendApplication.su ./Application/User/gui/Model.cyclo ./Application/User/gui/Model.d ./Application/User/gui/Model.o ./Application/User/gui/Model.su ./Application/User/gui/Screen1Presenter.cyclo ./Application/User/gui/Screen1Presenter.d ./Application/User/gui/Screen1Presenter.o ./Application/User/gui/Screen1Presenter.su ./Application/User/gui/Screen1View.cyclo ./Application/User/gui/Screen1View.d ./Application/User/gui/Screen1View.o ./Application/User/gui/Screen1View.su ./Application/User/gui/graphing_ScreenPresenter.cyclo ./Application/User/gui/graphing_ScreenPresenter.d ./Application/User/gui/graphing_ScreenPresenter.o ./Application/User/gui/graphing_ScreenPresenter.su ./Application/User/gui/graphing_ScreenView.cyclo ./Application/User/gui/graphing_ScreenView.d ./Application/User/gui/graphing_ScreenView.o ./Application/User/gui/graphing_ScreenView.su
+	-$(RM) ./Application/User/gui/FrontendApplication.cyclo ./Application/User/gui/FrontendApplication.d ./Application/User/gui/FrontendApplication.o ./Application/User/gui/FrontendApplication.su ./Application/User/gui/Model.cyclo ./Application/User/gui/Model.d ./Application/User/gui/Model.o ./Application/User/gui/Model.su ./Application/User/gui/Screen1Presenter.cyclo ./Application/User/gui/Screen1Presenter.d ./Application/User/gui/Screen1Presenter.o ./Application/User/gui/Screen1Presenter.su ./Application/User/gui/Screen1View.cyclo ./Application/User/gui/Screen1View.d ./Application/User/gui/Screen1View.o ./Application/User/gui/Screen1View.su ./Application/User/gui/graphing_ScreenPresenter.cyclo ./Application/User/gui/graphing_ScreenPresenter.d ./Application/User/gui/graphing_ScreenPresenter.o ./Application/User/gui/graphing_ScreenPresenter.su ./Application/User/gui/graphing_ScreenView.cyclo ./Application/User/gui/graphing_ScreenView.d ./Application/User/gui/graphing_ScreenView.o ./Application/User/gui/graphing_ScreenView.su ./Application/User/gui/right_container.cyclo ./Application/User/gui/right_container.d ./Application/User/gui/right_container.o ./Application/User/gui/right_container.su
 
 .PHONY: clean-Application-2f-User-2f-gui
 

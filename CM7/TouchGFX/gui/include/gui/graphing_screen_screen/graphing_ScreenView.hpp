@@ -9,6 +9,12 @@
 #include <math.h>
 #include <stdlib.h>
 #include <touchgfx/Color.hpp>
+enum IntroType {
+    INTRO_ELEMENTS,
+    INTRO_GAUGE_UP,
+    INTRO_GAUGE_DOWN,
+    INTRO_NONE
+};
 class graphing_ScreenView : public graphing_ScreenViewBase
 {
 public:
@@ -17,14 +23,17 @@ public:
     int digitalHours;
     int digitalMinutes;
     int digitalSeconds;
+    IntroType currentIntro = INTRO_NONE;
     graphing_ScreenView();
     virtual ~graphing_ScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
     virtual void sliderValueChanged(int value);
-    virtual void allVisibleDone();
     virtual float map_float(float x, float in_min, float in_max, float out_min, float out_max) ;
+    virtual void runIntros();
+    virtual void updateClock();
+    virtual void backGroundAnimationDone();
 protected:
 };
 

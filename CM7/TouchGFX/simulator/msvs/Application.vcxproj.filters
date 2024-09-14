@@ -196,6 +196,18 @@
     <Filter Include="Source Files\generated\gui_generated\screen1_screen">
       <UniqueIdentifier>2CA89243-F533-B16E-0419-94201BA099BD</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>C3E64CAA-0B2B-044B-4797-C93F5940528B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>F2312E18-181C-F6AE-9076-F2077F70366E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>20F592EE-A273-2497-FC09-7AD2A8355D11</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>692727EE-33A7-A13E-90C1-496B63D2DC6B</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +257,12 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\right_container.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\right_containerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +723,12 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\right_container.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\right_containerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

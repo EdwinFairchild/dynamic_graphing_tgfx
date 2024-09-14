@@ -602,6 +602,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/right_container.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/containers/right_container.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/graphing_ScreenPresenter.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/graphing_screen_screen/graphing_ScreenPresenter.cpp</locationURI>
@@ -652,14 +657,14 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_20_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Font_verdana_25_4bpp_0.cpp</name>
+			<name>Application/User/generated/Font_verdana_41_4bpp_0.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_25_4bpp_0.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_41_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Font_verdana_50_4bpp_0.cpp</name>
+			<name>Application/User/generated/Font_verdana_85_4bpp_0.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_50_4bpp_0.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_85_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/GeneratedFont.cpp</name>
@@ -677,14 +682,14 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_20_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Kerning_verdana_25_4bpp.cpp</name>
+			<name>Application/User/generated/Kerning_verdana_41_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_25_4bpp.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_41_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Kerning_verdana_50_4bpp.cpp</name>
+			<name>Application/User/generated/Kerning_verdana_85_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_50_4bpp.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_85_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_verdana_10_4bpp.cpp</name>
@@ -697,14 +702,14 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_20_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Table_verdana_25_4bpp.cpp</name>
+			<name>Application/User/generated/Table_verdana_41_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_25_4bpp.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_41_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Table_verdana_50_4bpp.cpp</name>
+			<name>Application/User/generated/Table_verdana_85_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_50_4bpp.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_85_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/UnmappedDataFont.cpp</name>
@@ -720,6 +725,11 @@
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/right_containerBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/containers/right_containerBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/graphing_ScreenViewBase.cpp</name>
@@ -1087,6 +1097,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_car_55.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_circle.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_circle.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_dash_2.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_dash_2.cpp</locationURI>
@@ -1125,6 +1140,31 @@
 			<name>Application/User/generated/image_swoop.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_swoop.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_temp_bg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_bg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_temp_blue.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_blue.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_temp_color.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_color.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_temp_progress.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_progress.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_temp_red.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_red.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_tire_pressure_0.cpp</name>

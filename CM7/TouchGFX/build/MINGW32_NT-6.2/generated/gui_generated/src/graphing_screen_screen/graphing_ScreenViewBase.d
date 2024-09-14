@@ -77,7 +77,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/graphing_screen_screen/graphing
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ gui/include/gui/containers/right_container.hpp \
+ generated/gui_generated/include/gui_generated/containers/right_containerBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  generated/images/include/images/BitmapDatabase.hpp \
@@ -237,7 +240,13 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
 
+gui/include/gui/containers/right_container.hpp:
+
+generated/gui_generated/include/gui_generated/containers/right_containerBase.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 

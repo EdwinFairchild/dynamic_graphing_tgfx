@@ -160,15 +160,6 @@
                   },
                   {
                     "Type": "Image",
-                    "Name": "Image3",
-                    "X": -2,
-                    "Y": -46,
-                    "Width": 169,
-                    "Height": 392,
-                    "RelativeFilename": "Vector 20.png"
-                  },
-                  {
-                    "Type": "Image",
                     "Name": "Image4",
                     "X": 220,
                     "Y": -37,
@@ -178,18 +169,18 @@
                   },
                   {
                     "Type": "Image",
-                    "Name": "circle",
-                    "X": 43,
-                    "Y": 172,
-                    "Width": 287,
-                    "Height": 149,
-                    "RelativeFilename": "Vector.png"
+                    "Name": "image5",
+                    "X": 6,
+                    "Y": -70,
+                    "Width": 169,
+                    "Height": 392,
+                    "RelativeFilename": "Vector 20.png"
                   },
                   {
                     "Type": "TextArea",
                     "Name": "mph_lable",
-                    "X": 109,
-                    "Y": 121,
+                    "X": 111,
+                    "Y": 129,
                     "Width": 151,
                     "Height": 28,
                     "TextId": "__SingleUse_Z0UY",
@@ -204,9 +195,9 @@
                     "Type": "TextArea",
                     "Name": "mph",
                     "X": 109,
-                    "Y": 50,
+                    "Y": 34,
                     "Width": 151,
-                    "Height": 64,
+                    "Height": 85,
                     "TextId": "__SingleUse_UE0S",
                     "TextRotation": "0",
                     "Color": {
@@ -372,6 +363,26 @@
             "IndicatorPositionHeight": 388,
             "ProgressRangeMax": 100,
             "ProgressInitialValue": 60
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "right_container1",
+            "X": -4,
+            "Y": -11,
+            "Width": 224,
+            "Height": 396,
+            "CustomContainerDefinitionName": "right_container"
+          },
+          {
+            "Type": "Image",
+            "Name": "circle",
+            "X": 270,
+            "Y": 308,
+            "Width": 265,
+            "Height": 149,
+            "RelativeFilename": "circle.png",
+            "Fadeable": true,
+            "Moveable": true
           }
         ],
         "Interactions": [
@@ -401,21 +412,8 @@
               "Type": "ActionFade",
               "Easing": "Linear",
               "EasingOption": "In",
-              "Duration": 500,
+              "Duration": 250,
               "ActionComponent": "background"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "Trigger": {
-              "Type": "TriggerScreenTransitionBegins"
-            },
-            "Action": {
-              "Type": "ActionFade",
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 2500,
-              "ActionComponent": "circle"
             }
           },
           {
@@ -426,17 +424,7 @@
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "allVisibleDone"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "Trigger": {
-              "Type": "TriggerNone"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "btn_gas_clicked"
+              "FunctionName": "backGroundAnimationDone"
             }
           },
           {
@@ -453,7 +441,81 @@
         ]
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "right_container",
+        "Width": 224,
+        "Height": 396,
+        "Components": [
+          {
+            "Type": "SwipeContainer",
+            "Name": "page2",
+            "Width": 256,
+            "Height": 396,
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "IndicatorImageNormal": "swipe_container_pager.png",
+            "IndicatorImageHighlight": "swipe_container_pager.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "right_temp_page",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "right_temp_page",
+                "Width": 256,
+                "Height": 396,
+                "Components": [
+                  {
+                    "Type": "ImageProgress",
+                    "Name": "temp_progress",
+                    "Width": 163,
+                    "Height": 388,
+                    "FileNameProgress": "temp_color.png",
+                    "AnchorAtZero": true,
+                    "Direction": "Up",
+                    "FileNameBackground": "temp_bg.png",
+                    "IndicatorPositionWidth": 163,
+                    "IndicatorPositionHeight": 388,
+                    "ProgressRangeMax": 100,
+                    "ProgressInitialValue": 63,
+                    "Fadeable": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "temp_text_area",
+                    "X": 84,
+                    "Y": 219,
+                    "Width": 52,
+                    "Height": 42,
+                    "TextId": "__SingleUse_3MX6",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 107,
+                      "Green": 107,
+                      "Blue": 107
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_QW5T",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page1",
+                "Width": 256,
+                "Height": 396,
+                "Components": []
+              }
+            ]
+          }
+        ],
+        "Interactions": []
+      }
+    ],
     "Name": "dynamic_graphing",
     "Resolution": {
       "Width": 800,
