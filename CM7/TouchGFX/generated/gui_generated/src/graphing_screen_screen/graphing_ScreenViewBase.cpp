@@ -41,7 +41,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setStartEndAngle(-117, 121);
     gauge1.setRange(10, 100);
     gauge1.setValue(92);
-    gauge1.setNeedle(BITMAP_NEEDLE_2_ID, 19.3f, 103.1f);
+    gauge1.setNeedle(BITMAP_NEEDLE_2_ID, 20.0f, 103.1f);
     gauge1.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setArcVisible();
@@ -68,15 +68,15 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     car.setDoneAction(animationEndedCallback);
     car_container.add(car);
 
-    Image4.setXY(220, -37);
+    Image4.setXY(216, -20);
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
     car_container.add(Image4);
 
-    image5.setXY(6, -70);
+    image5.setXY(6, -45);
     image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
     car_container.add(image5);
 
-    mph_lable.setPosition(111, 129, 151, 28);
+    mph_lable.setPosition(110, 129, 151, 28);
     mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph_lable.setLinespacing(0);
     mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
@@ -139,7 +139,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
 
-    slider1.setXY(580, 450);
+    slider1.setXY(584, 446);
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
     slider1.setupHorizontalSlider(16, 11, 0, 0, 200);
     slider1.setValueRange(0, 200);
@@ -151,11 +151,11 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     digitalClock1.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     digitalClock1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9ZRH));
     digitalClock1.displayLeadingZeroForHourIndicator(true);
-    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_12_HOUR_NO_SECONDS);
+    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_12_HOUR);
     digitalClock1.setTime12Hour(10, 10, 0, true);
     add(digitalClock1);
 
-    battery_level.setXY(635, -8);
+    battery_level.setXY(629, -5);
     battery_level.setProgressIndicatorPosition(0, 0, 163, 388);
     battery_level.setRange(0, 100);
     battery_level.setDirection(touchgfx::AbstractDirectionProgress::UP);
@@ -165,10 +165,10 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     battery_level.setAnchorAtZero(true);
     add(battery_level);
 
-    right_container1.setXY(-4, -11);
+    right_container1.setXY(2, -5);
     add(right_container1);
 
-    circle.setXY(270, 308);
+    circle.setXY(273, 308);
     circle.setBitmap(touchgfx::Bitmap(BITMAP_CIRCLE_ID));
     add(circle);
 }

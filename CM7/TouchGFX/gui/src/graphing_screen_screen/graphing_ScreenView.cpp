@@ -49,6 +49,7 @@ void graphing_ScreenView::sliderValueChanged(int value)
     gauge1.setValue(map_float(speed,0.0,210.0,16.0,92.0)); 
     battery_level.setValue(speed);
     right_container1.setTempProgressValue(speed);
+    right_container1.setLeftGaugeValue(speed);
     // MPH Color depending on speed
     if(speed < 80){
         mph.setColor(slowColor);

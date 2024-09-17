@@ -15,6 +15,11 @@ void right_container::setTempProgressValue(int value) {
         temp_progress.invalidate();
     }
 
+void right_container::setLeftGaugeValue(int value) {
+    gauge_left_progress.setValue(value);
+    gauge_left_progress.invalidate();
+}
+
 void right_container::setAlpha(uint8_t alpha) {
     temp_progress.setAlpha(alpha);
     temp_text_area.setAlpha(alpha);

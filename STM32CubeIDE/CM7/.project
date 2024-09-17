@@ -812,11 +812,6 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_battery_fill.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_btry.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_btry.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_car_00.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_car_00.cpp</locationURI>
@@ -1117,6 +1112,16 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_gauge.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_left_gauge_bg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_left_gauge_bg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_left_gauge_fill.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_left_gauge_fill.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_needle.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle.cpp</locationURI>
@@ -1125,6 +1130,11 @@
 			<name>Application/User/generated/image_needle_2.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle_2.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_needle_3.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle_3.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_speed-highlight.cpp</name>
@@ -1157,11 +1167,6 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_color.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_temp_progress.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_progress.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_temp_red.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_temp_red.cpp</locationURI>
@@ -1175,6 +1180,11 @@
 			<name>Application/User/generated/image_tire_pressure_1.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_tire_pressure_1.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_tire_pressure_2.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_tire_pressure_2.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

@@ -27,11 +27,13 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::SwipeContainer page2;
+    touchgfx::SwipeContainer page1;
     touchgfx::Container right_temp_page;
     touchgfx::FadeAnimator< touchgfx::ImageProgress > temp_progress;
     touchgfx::TextAreaWithOneWildcard temp_text_area;
-    touchgfx::Container swipeContainer1Page1;
+    touchgfx::Container left_gauge_page;
+    touchgfx::ImageProgress gauge_left_progress;
+    touchgfx::Container gauge_left;
 
     /*
      * Wildcard Buffers

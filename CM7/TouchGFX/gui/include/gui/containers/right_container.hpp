@@ -10,6 +10,7 @@ public:
     virtual ~right_container() {}
     virtual void setTempProgressValue(int value);
     virtual void setAlpha(uint8_t alpha);
+    virtual void setLeftGaugeValue(int value);
 
 
 

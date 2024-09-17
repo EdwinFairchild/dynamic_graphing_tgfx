@@ -105,7 +105,7 @@
             "Easing": "Linear",
             "EasingOption": "In",
             "FileNameNeedle": "needle_2.png",
-            "NeedleRotationCenterX": 19.3,
+            "NeedleRotationCenterX": 20.0,
             "NeedleRotationCenterY": 103.1,
             "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
             "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
@@ -161,8 +161,8 @@
                   {
                     "Type": "Image",
                     "Name": "Image4",
-                    "X": 220,
-                    "Y": -37,
+                    "X": 216,
+                    "Y": -20,
                     "Width": 152,
                     "Height": 389,
                     "RelativeFilename": "Vector 19.png"
@@ -171,7 +171,7 @@
                     "Type": "Image",
                     "Name": "image5",
                     "X": 6,
-                    "Y": -70,
+                    "Y": -45,
                     "Width": 169,
                     "Height": 392,
                     "RelativeFilename": "Vector 20.png"
@@ -179,7 +179,7 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph_lable",
-                    "X": 111,
+                    "X": 110,
                     "Y": 129,
                     "Width": 151,
                     "Height": 28,
@@ -317,8 +317,8 @@
           {
             "Type": "Slider",
             "Name": "slider1",
-            "X": 580,
-            "Y": 450,
+            "X": 584,
+            "Y": 446,
             "Width": 232,
             "Height": 32,
             "IsHorizontalSlider": true,
@@ -343,6 +343,7 @@
               "Blue": 102
             },
             "TextId": "__SingleUse_9ZRH",
+            "DisplaySeconds": true,
             "DisplayLeadingZeroForHourIndicator": true,
             "UseAmPm": true,
             "InitialHour": 10,
@@ -351,8 +352,8 @@
           {
             "Type": "ImageProgress",
             "Name": "battery_level",
-            "X": 635,
-            "Y": -8,
+            "X": 629,
+            "Y": -5,
             "Width": 163,
             "Height": 388,
             "FileNameProgress": "battery_fill.png",
@@ -367,16 +368,16 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "right_container1",
-            "X": -4,
-            "Y": -11,
-            "Width": 224,
+            "X": 2,
+            "Y": -5,
+            "Width": 256,
             "Height": 396,
             "CustomContainerDefinitionName": "right_container"
           },
           {
             "Type": "Image",
             "Name": "circle",
-            "X": 270,
+            "X": 273,
             "Y": 308,
             "Width": 265,
             "Height": 149,
@@ -444,12 +445,13 @@
     "CustomContainerDefinitions": [
       {
         "Name": "right_container",
-        "Width": 224,
+        "Y": 2,
+        "Width": 256,
         "Height": 396,
         "Components": [
           {
             "Type": "SwipeContainer",
-            "Name": "page2",
+            "Name": "page1",
             "Width": 256,
             "Height": 396,
             "SwipeCutoff": 50,
@@ -468,6 +470,7 @@
                   {
                     "Type": "ImageProgress",
                     "Name": "temp_progress",
+                    "X": 4,
                     "Width": 163,
                     "Height": 388,
                     "FileNameProgress": "temp_color.png",
@@ -484,7 +487,7 @@
                     "Type": "TextArea",
                     "Name": "temp_text_area",
                     "X": 84,
-                    "Y": 219,
+                    "Y": 203,
                     "Width": 52,
                     "Height": 42,
                     "TextId": "__SingleUse_3MX6",
@@ -505,12 +508,36 @@
               },
               {
                 "Type": "Container",
-                "Name": "swipeContainer1Page1",
+                "Name": "left_gauge_page",
                 "Width": 256,
                 "Height": 396,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ImageProgress",
+                    "Name": "gauge_left_progress",
+                    "X": 2,
+                    "Y": -4,
+                    "Width": 256,
+                    "Height": 396,
+                    "FileNameProgress": "left_gauge_fill.png",
+                    "AnchorAtZero": true,
+                    "Direction": "Up",
+                    "FileNameBackground": "left_gauge_bg.png",
+                    "IndicatorPositionWidth": 256,
+                    "IndicatorPositionHeight": 396,
+                    "ProgressRangeMax": 200,
+                    "ProgressInitialValue": 100
+                  }
+                ]
               }
             ]
+          },
+          {
+            "Type": "Container",
+            "Name": "gauge_left",
+            "Width": 256,
+            "Height": 396,
+            "Components": []
           }
         ],
         "Interactions": []
