@@ -10,19 +10,19 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/Gauge.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/widgets/AnimatedImage.hpp>
+#include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Gauge.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 #include <touchgfx/containers/Slider.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
 #include <gui/containers/right_container.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/MoveAnimator.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
 
 class graphing_ScreenViewBase : public touchgfx::View<graphing_ScreenPresenter>
 {
@@ -56,15 +56,16 @@ protected:
     touchgfx::Box box1;
     touchgfx::Box box2;
     touchgfx::FadeAnimator< touchgfx::Image > background;
-    touchgfx::FadeAnimator< touchgfx::Gauge > gauge1;
-    touchgfx::PainterRGB888Bitmap gauge1Painter;
     touchgfx::SwipeContainer swipeContainer1;
     touchgfx::Container car_container;
     touchgfx::AnimatedImage car;
+    touchgfx::FadeAnimator< touchgfx::MoveAnimator< touchgfx::Image > > circle;
     touchgfx::Image Image4;
     touchgfx::Image image5;
     touchgfx::TextArea mph_lable;
     touchgfx::TextAreaWithOneWildcard mph;
+    touchgfx::FadeAnimator< touchgfx::Gauge > gauge1;
+    touchgfx::PainterRGB888Bitmap gauge1Painter;
     touchgfx::Container tire_pres_pg;
     touchgfx::Image tire_pre;
     touchgfx::TextAreaWithOneWildcard pres_fl;
@@ -75,7 +76,6 @@ protected:
     touchgfx::DigitalClock digitalClock1;
     touchgfx::ImageProgress battery_level;
     right_container right_container1;
-    touchgfx::FadeAnimator< touchgfx::MoveAnimator< touchgfx::Image > > circle;
 
     /*
      * Wildcard Buffers

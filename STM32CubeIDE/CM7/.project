@@ -1122,16 +1122,6 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_left_gauge_fill.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_needle.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_needle_2.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle_2.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_needle_3.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_needle_3.cpp</locationURI>

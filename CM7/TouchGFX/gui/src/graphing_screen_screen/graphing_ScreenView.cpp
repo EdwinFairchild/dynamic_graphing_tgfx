@@ -115,8 +115,10 @@ void graphing_ScreenView::runIntros()
         {
             right_container1.setAlpha(incr);
             battery_level.setAlpha(incr);
+            circle.setAlpha(incr);
             right_container1.invalidate();
             battery_level.invalidate();
+            circle.invalidate();
             incr+=5;
         }
         else
