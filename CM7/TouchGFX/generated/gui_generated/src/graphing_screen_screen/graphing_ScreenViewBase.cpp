@@ -61,13 +61,13 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
     car_container.add(image5);
 
-    mph_lable.setPosition(110, 268, 151, 28);
+    mph_lable.setPosition(112, 199, 151, 28);
     mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph_lable.setLinespacing(0);
     mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
     car_container.add(mph_lable);
 
-    mph.setPosition(109, 178, 151, 85);
+    mph.setPosition(61, 59, 250, 148);
     mph.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph.setLinespacing(0);
     Unicode::snprintf(mphBuffer, MPH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_49UH).getText());
@@ -77,7 +77,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
 
     gauge1.setBackground(touchgfx::Bitmap(BITMAP_GAUGE_ID));
     gauge1.setBackgroundOffset(0, -45);
-    gauge1.setPosition(18, -8, 336, 336);
+    gauge1.setPosition(615, -202, 336, 336);
     gauge1.setCenter(168, 168);
     gauge1.setStartEndAngle(-117, 121);
     gauge1.setRange(10, 100);

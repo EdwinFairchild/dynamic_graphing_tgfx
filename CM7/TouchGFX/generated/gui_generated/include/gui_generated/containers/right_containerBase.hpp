@@ -31,8 +31,8 @@ protected:
     touchgfx::Container right_temp_page;
     touchgfx::FadeAnimator< touchgfx::ImageProgress > temp_progress;
     touchgfx::TextAreaWithOneWildcard temp_text_area;
-    touchgfx::Container left_gauge_page;
     touchgfx::ImageProgress gauge_left_progress;
+    touchgfx::Container left_gauge_page;
     touchgfx::Container gauge_left;
 
     /*

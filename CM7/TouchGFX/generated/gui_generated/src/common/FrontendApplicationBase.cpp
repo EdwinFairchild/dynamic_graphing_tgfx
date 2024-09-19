@@ -33,18 +33,20 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// graphing_Screen
+// Screen1
 
-void FrontendApplicationBase::gotographing_ScreenScreenNoTransition()
+void FrontendApplicationBase::gotoScreen1ScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotographing_ScreenScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotographing_ScreenScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<graphing_ScreenView, graphing_ScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// graphing_Screen
 
 void FrontendApplicationBase::gotographing_ScreenScreenWipeTransitionEast()
 {

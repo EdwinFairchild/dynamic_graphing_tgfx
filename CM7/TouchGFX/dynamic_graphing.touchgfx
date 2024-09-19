@@ -151,8 +151,8 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph_lable",
-                    "X": 110,
-                    "Y": 268,
+                    "X": 112,
+                    "Y": 199,
                     "Width": 151,
                     "Height": 28,
                     "TextId": "__SingleUse_Z0UY",
@@ -166,10 +166,10 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph",
-                    "X": 109,
-                    "Y": 178,
-                    "Width": 151,
-                    "Height": 85,
+                    "X": 61,
+                    "Y": 59,
+                    "Width": 250,
+                    "Height": 148,
                     "TextId": "__SingleUse_UE0S",
                     "TextRotation": "0",
                     "Color": {
@@ -186,8 +186,8 @@
                   {
                     "Type": "Gauge",
                     "Name": "gauge1",
-                    "X": 18,
-                    "Y": -8,
+                    "X": 615,
+                    "Y": -202,
                     "Width": 336,
                     "Height": 336,
                     "FileNameBackground": "gauge.png",
@@ -471,6 +471,7 @@
                     "Type": "ImageProgress",
                     "Name": "temp_progress",
                     "X": 4,
+                    "Y": -20,
                     "Width": 163,
                     "Height": 388,
                     "FileNameProgress": "temp_color.png",
@@ -486,8 +487,7 @@
                   {
                     "Type": "TextArea",
                     "Name": "temp_text_area",
-                    "X": 84,
-                    "Y": 203,
+                    "X": -84,
                     "Width": 52,
                     "Height": 42,
                     "TextId": "__SingleUse_3MX6",
@@ -503,6 +503,22 @@
                       "UseBuffer": true,
                       "BufferSize": 10
                     }
+                  },
+                  {
+                    "Type": "ImageProgress",
+                    "Name": "gauge_left_progress",
+                    "X": 54,
+                    "Y": 53,
+                    "Width": 225,
+                    "Height": 280,
+                    "FileNameProgress": "left_gauge_fill.png",
+                    "AnchorAtZero": true,
+                    "Direction": "Up",
+                    "FileNameBackground": "left_gauge_bg.png",
+                    "IndicatorPositionWidth": 200,
+                    "IndicatorPositionHeight": 280,
+                    "ProgressRangeMax": 200,
+                    "ProgressInitialValue": 100
                   }
                 ]
               },
@@ -511,24 +527,7 @@
                 "Name": "left_gauge_page",
                 "Width": 256,
                 "Height": 396,
-                "Components": [
-                  {
-                    "Type": "ImageProgress",
-                    "Name": "gauge_left_progress",
-                    "X": 2,
-                    "Y": -4,
-                    "Width": 256,
-                    "Height": 396,
-                    "FileNameProgress": "left_gauge_fill.png",
-                    "AnchorAtZero": true,
-                    "Direction": "Up",
-                    "FileNameBackground": "left_gauge_bg.png",
-                    "IndicatorPositionWidth": 256,
-                    "IndicatorPositionHeight": 396,
-                    "ProgressRangeMax": 200,
-                    "ProgressInitialValue": 100
-                  }
-                ]
+                "Components": []
               }
             ]
           },
@@ -549,7 +548,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "graphing_Screen",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

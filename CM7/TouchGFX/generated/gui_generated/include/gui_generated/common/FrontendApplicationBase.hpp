@@ -17,12 +17,13 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotographing_ScreenScreenNoTransition();
+        gotoScreen1ScreenNoTransition();
     }
 
-    // graphing_Screen
-    void gotographing_ScreenScreenNoTransition();
+    // Screen1
+    void gotoScreen1ScreenNoTransition();
 
+    // graphing_Screen
     void gotographing_ScreenScreenWipeTransitionEast();
 
 protected:
@@ -30,9 +31,10 @@ protected:
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // graphing_Screen
-    void gotographing_ScreenScreenNoTransitionImpl();
+    // Screen1
+    void gotoScreen1ScreenNoTransitionImpl();
 
+    // graphing_Screen
     void gotographing_ScreenScreenWipeTransitionEastImpl();
 };
 

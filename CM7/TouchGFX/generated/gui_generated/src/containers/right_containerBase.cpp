@@ -18,7 +18,7 @@ right_containerBase::right_containerBase()
 
     right_temp_page.setWidth(256);
     right_temp_page.setHeight(396);
-    temp_progress.setXY(4, 0);
+    temp_progress.setXY(4, -20);
     temp_progress.setProgressIndicatorPosition(0, 0, 163, 388);
     temp_progress.setRange(0, 100);
     temp_progress.setDirection(touchgfx::AbstractDirectionProgress::UP);
@@ -28,7 +28,7 @@ right_containerBase::right_containerBase()
     temp_progress.setAnchorAtZero(true);
     right_temp_page.add(temp_progress);
 
-    temp_text_area.setXY(84, 203);
+    temp_text_area.setXY(-84, 0);
     temp_text_area.setColor(touchgfx::Color::getColorFromRGB(107, 107, 107));
     temp_text_area.setLinespacing(0);
     Unicode::snprintf(temp_text_areaBuffer, TEMP_TEXT_AREA_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_QW5T).getText());
@@ -37,20 +37,20 @@ right_containerBase::right_containerBase()
     temp_text_area.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3MX6));
     right_temp_page.add(temp_text_area);
 
-    page1.add(right_temp_page);
-
-    left_gauge_page.setWidth(256);
-    left_gauge_page.setHeight(396);
-    gauge_left_progress.setXY(2, -4);
-    gauge_left_progress.setProgressIndicatorPosition(0, 0, 256, 396);
+    gauge_left_progress.setXY(54, 53);
+    gauge_left_progress.setProgressIndicatorPosition(0, 0, 200, 280);
     gauge_left_progress.setRange(0, 200);
     gauge_left_progress.setDirection(touchgfx::AbstractDirectionProgress::UP);
     gauge_left_progress.setBackground(touchgfx::Bitmap(BITMAP_LEFT_GAUGE_BG_ID));
     gauge_left_progress.setBitmap(BITMAP_LEFT_GAUGE_FILL_ID);
     gauge_left_progress.setValue(100);
     gauge_left_progress.setAnchorAtZero(true);
-    left_gauge_page.add(gauge_left_progress);
+    right_temp_page.add(gauge_left_progress);
 
+    page1.add(right_temp_page);
+
+    left_gauge_page.setWidth(256);
+    left_gauge_page.setHeight(396);
     page1.add(left_gauge_page);
 
     page1.setSelectedPage(0);
