@@ -37,7 +37,7 @@ right_containerBase::right_containerBase()
     temp_text_area.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3MX6));
     right_temp_page.add(temp_text_area);
 
-    gauge_left_progress.setXY(54, 53);
+    gauge_left_progress.setXY(73, 49);
     gauge_left_progress.setProgressIndicatorPosition(0, 0, 200, 280);
     gauge_left_progress.setRange(0, 200);
     gauge_left_progress.setDirection(touchgfx::AbstractDirectionProgress::UP);

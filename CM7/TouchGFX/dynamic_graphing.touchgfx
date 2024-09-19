@@ -111,7 +111,7 @@
                     "Type": "AnimatedImage",
                     "Name": "car",
                     "X": 59,
-                    "Y": 307,
+                    "Y": 319,
                     "Width": 256,
                     "Height": 144,
                     "FileNameFirst": "car_00.png",
@@ -122,8 +122,8 @@
                   {
                     "Type": "Image",
                     "Name": "circle",
-                    "X": 57,
-                    "Y": 308,
+                    "X": 52,
+                    "Y": 310,
                     "Width": 265,
                     "Height": 149,
                     "RelativeFilename": "circle.png",
@@ -133,8 +133,8 @@
                   {
                     "Type": "Image",
                     "Name": "Image4",
-                    "X": 228,
-                    "Y": 146,
+                    "X": 245,
+                    "Y": 174,
                     "Width": 152,
                     "Height": 389,
                     "RelativeFilename": "Vector 19.png"
@@ -142,8 +142,8 @@
                   {
                     "Type": "Image",
                     "Name": "image5",
-                    "X": -11,
-                    "Y": 144,
+                    "X": -26,
+                    "Y": 151,
                     "Width": 169,
                     "Height": 392,
                     "RelativeFilename": "Vector 20.png"
@@ -151,7 +151,7 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph_lable",
-                    "X": 112,
+                    "X": 109,
                     "Y": 199,
                     "Width": 151,
                     "Height": 28,
@@ -166,7 +166,7 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph",
-                    "X": 61,
+                    "X": 59,
                     "Y": 59,
                     "Width": 250,
                     "Height": 148,
@@ -328,8 +328,8 @@
           {
             "Type": "Slider",
             "Name": "slider1",
-            "X": 570,
-            "Y": 448,
+            "X": 14,
+            "Y": 385,
             "Width": 232,
             "Height": 32,
             "IsHorizontalSlider": true,
@@ -507,8 +507,8 @@
                   {
                     "Type": "ImageProgress",
                     "Name": "gauge_left_progress",
-                    "X": 54,
-                    "Y": 53,
+                    "X": 73,
+                    "Y": 49,
                     "Width": 225,
                     "Height": 280,
                     "FileNameProgress": "left_gauge_fill.png",

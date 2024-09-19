@@ -9,59 +9,59 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .rodata       00004bf4  08028bf0  08028bf0  00029bf0  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 FontFlashSection 00004876  0802d7e4  0802d7e4  0002e7e4  2**2
+  3 FontFlashSection 000098f6  0802d7e4  0802d7e4  0002e7e4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 FontSearchFlashSection 00000040  0803205c  0803205c  0003305c  2**2
+  4 FontSearchFlashSection 00000040  080370dc  080370dc  000380dc  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 ExtFlashSection 00ff65e0  90000000  90000000  00035000  2**2
+  5 ExtFlashSection 010040a0  90000000  90000000  0003a000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  6 TextFlashSection 0000009a  90ff65e0  90ff65e0  0102b5e0  2**2
+  6 TextFlashSection 0000009a  910040a0  910040a0  0103e0a0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .ARM.extab    00000000  0803209c  0803209c  0102b67a  2**0
+  7 .ARM.extab    00000000  0803711c  0803711c  0103e13a  2**0
                   CONTENTS
-  8 .ARM          00000008  0803209c  0803209c  0003309c  2**2
+  8 .ARM          00000008  0803711c  0803711c  0003811c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  9 .preinit_array 00000000  080320a4  080320a4  0102b67a  2**0
+  9 .preinit_array 00000000  08037124  08037124  0103e13a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 10 .init_array   0000001c  080320a4  080320a4  000330a4  2**2
+ 10 .init_array   0000001c  08037124  08037124  00038124  2**2
                   CONTENTS, ALLOC, LOAD, DATA
- 11 .fini_array   00000008  080320c0  080320c0  000330c0  2**2
+ 11 .fini_array   00000008  08037140  08037140  00038140  2**2
                   CONTENTS, ALLOC, LOAD, DATA
- 12 .data         0000013c  24000000  080320c8  00034000  2**2
+ 12 .data         0000013c  24000000  08037148  00039000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
- 13 TouchGFX_ScratchbufferA 00000100  24000140  08032204  00034140  2**5
+ 13 TouchGFX_ScratchbufferA 00000100  24000140  08037284  00039140  2**5
                   CONTENTS, ALLOC, LOAD, DATA
- 14 TouchGFX_ScratchbufferB 00000100  24000240  08032304  00034240  2**5
+ 14 TouchGFX_ScratchbufferB 00000100  24000240  08037384  00039240  2**5
                   CONTENTS, ALLOC, LOAD, DATA
- 15 .bss          00029800  24000340  08032404  00034340  2**2
+ 15 .bss          00029800  24000340  08037484  00039340  2**2
                   ALLOC
- 16 ._user_heap_stack 00002000  24029b40  08032404  00034b40  2**0
+ 16 ._user_heap_stack 00002000  24029b40  08037484  00039b40  2**0
                   ALLOC
- 17 .ARM.attributes 0000002e  00000000  00000000  0102b67a  2**0
+ 17 .ARM.attributes 0000002e  00000000  00000000  0103e13a  2**0
                   CONTENTS, READONLY
- 18 BufferSection 00232800  d0000000  d0000000  0102c000  2**2
+ 18 BufferSection 00232800  d0000000  d0000000  0103f000  2**2
                   ALLOC
- 19 .debug_info   0011e67e  00000000  00000000  0102b6a8  2**0
+ 19 .debug_info   0011e67e  00000000  00000000  0103e168  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_abbrev 0001c8da  00000000  00000000  01149d26  2**0
+ 20 .debug_abbrev 0001c8da  00000000  00000000  0115c7e6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_aranges 00004838  00000000  00000000  01166600  2**3
+ 21 .debug_aranges 00004838  00000000  00000000  011790c0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_rnglists 000048da  00000000  00000000  0116ae38  2**0
+ 22 .debug_rnglists 000048da  00000000  00000000  0117d8f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_macro  00054ba8  00000000  00000000  0116f712  2**0
+ 23 .debug_macro  00054ba8  00000000  00000000  011821d2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_line   00076888  00000000  00000000  011c42ba  2**0
+ 24 .debug_line   0007688b  00000000  00000000  011d6d7a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_str    001ebf70  00000000  00000000  0123ab42  2**0
+ 25 .debug_str    001ebf79  00000000  00000000  0124d605  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 26 .comment      000000c2  00000000  00000000  01426ab2  2**0
+ 26 .comment      000000c2  00000000  00000000  0143957e  2**0
                   CONTENTS, READONLY
- 27 .debug_frame  0000b4b0  00000000  00000000  01426b74  2**2
+ 27 .debug_frame  0000b4b0  00000000  00000000  01439640  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 28 .debug_loclists 00023edd  00000000  00000000  01432024  2**0
+ 28 .debug_loclists 00023edd  00000000  00000000  01444af0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 29 .debug_line_str 0000006c  00000000  00000000  01455f01  2**0
+ 29 .debug_line_str 0000006c  00000000  00000000  014689cd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -3213,7 +3213,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  8001754:	2400013c 	.word	0x2400013c
   ldr r2, =_sidata
- 8001758:	080320c8 	.word	0x080320c8
+ 8001758:	08037148 	.word	0x08037148
   ldr r2, =_sbss
  800175c:	24000340 	.word	0x24000340
   ldr r4, =_ebss
@@ -9457,7 +9457,7 @@ HardwareMJPEGDecoder mjpegdecoder1;
 
 08003920 <_ZN23ApplicationFontProviderD1Ev>:
     static const touchgfx::FontId SMALL = 2;   // verdana_10_4bpp
-    static const touchgfx::FontId MPH = 3;     // verdana_85_4bpp
+    static const touchgfx::FontId MPH = 3;     // verdana_132_4bpp
     static const uint16_t NUMBER_OF_FONTS = 4;
 };
 
@@ -9492,7 +9492,7 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
  800393e:	f000 fe39 	bl	80045b4 <_ZN17TypedTextDatabase8getFontsEv>
  8003942:	6800      	ldr	r0, [r0, #0]
-        // verdana_85_4bpp
+        // verdana_132_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
     default:
         return 0;
@@ -11250,195 +11250,195 @@ touchgfx::GeneratedFont& getFont_verdana_10_4bpp()
  80042a4:	bd30      	pop	{r4, r5, pc}
  80042a6:	bf00      	nop
  80042a8:	2400ed30 	.word	0x2400ed30
- 80042ac:	08031e18 	.word	0x08031e18
- 80042b0:	0803205c 	.word	0x0803205c
+ 80042ac:	08036e98 	.word	0x08036e98
+ 80042b0:	080370dc 	.word	0x080370dc
  80042b4:	2400ed34 	.word	0x2400ed34
- 80042b8:	0803208c 	.word	0x0803208c
+ 80042b8:	0803710c 	.word	0x0803710c
  80042bc:	08004249 	.word	0x08004249
 
 080042c0 <__tcf_0>:
+KEEP extern const touchgfx::KerningNode kerning_verdana_132_4bpp[] FONT_KERNING_LOCATION_FLASH_ATTRIBUTE;
+touchgfx::GeneratedFont& getFont_verdana_132_4bpp();
+
+touchgfx::GeneratedFont& getFont_verdana_132_4bpp()
+{
+    static touchgfx::GeneratedFont verdana_132_4bpp(glyphs_verdana_132_4bpp, 11, 134, 132, 0, 0, 4, 1, 0, 0, unicodes_verdana_132_4bpp, kerning_verdana_132_4bpp, 63, 0, 0, 0);
+ 80042c0:	4770      	bx	lr
+	...
+
+080042c4 <_Z24getFont_verdana_132_4bppv>:
+{
+ 80042c4:	b530      	push	{r4, r5, lr}
+    static touchgfx::GeneratedFont verdana_132_4bpp(glyphs_verdana_132_4bpp, 11, 134, 132, 0, 0, 4, 1, 0, 0, unicodes_verdana_132_4bpp, kerning_verdana_132_4bpp, 63, 0, 0, 0);
+ 80042c6:	4d17      	ldr	r5, [pc, #92]	@ (8004324 <_Z24getFont_verdana_132_4bppv+0x60>)
+{
+ 80042c8:	b08f      	sub	sp, #60	@ 0x3c
+    static touchgfx::GeneratedFont verdana_132_4bpp(glyphs_verdana_132_4bpp, 11, 134, 132, 0, 0, 4, 1, 0, 0, unicodes_verdana_132_4bpp, kerning_verdana_132_4bpp, 63, 0, 0, 0);
+ 80042ca:	682c      	ldr	r4, [r5, #0]
+ 80042cc:	f3bf 8f5b 	dmb	ish
+ 80042d0:	f014 0401 	ands.w	r4, r4, #1
+ 80042d4:	d122      	bne.n	800431c <_Z24getFont_verdana_132_4bppv+0x58>
+ 80042d6:	4628      	mov	r0, r5
+ 80042d8:	f023 f8d3 	bl	8027482 <__cxa_guard_acquire>
+ 80042dc:	b1f0      	cbz	r0, 800431c <_Z24getFont_verdana_132_4bppv+0x58>
+ 80042de:	233f      	movs	r3, #63	@ 0x3f
+ 80042e0:	2201      	movs	r2, #1
+ 80042e2:	4911      	ldr	r1, [pc, #68]	@ (8004328 <_Z24getFont_verdana_132_4bppv+0x64>)
+ 80042e4:	9309      	str	r3, [sp, #36]	@ 0x24
+ 80042e6:	4b11      	ldr	r3, [pc, #68]	@ (800432c <_Z24getFont_verdana_132_4bppv+0x68>)
+ 80042e8:	4811      	ldr	r0, [pc, #68]	@ (8004330 <_Z24getFont_verdana_132_4bppv+0x6c>)
+ 80042ea:	9308      	str	r3, [sp, #32]
+ 80042ec:	4b11      	ldr	r3, [pc, #68]	@ (8004334 <_Z24getFont_verdana_132_4bppv+0x70>)
+ 80042ee:	940a      	str	r4, [sp, #40]	@ 0x28
+ 80042f0:	9405      	str	r4, [sp, #20]
+ 80042f2:	e9cd 4306 	strd	r4, r3, [sp, #24]
+ 80042f6:	2304      	movs	r3, #4
+ 80042f8:	e9cd 3203 	strd	r3, r2, [sp, #12]
+ 80042fc:	2384      	movs	r3, #132	@ 0x84
+ 80042fe:	220b      	movs	r2, #11
+ 8004300:	9300      	str	r3, [sp, #0]
+ 8004302:	2386      	movs	r3, #134	@ 0x86
+ 8004304:	e9cd 440b 	strd	r4, r4, [sp, #44]	@ 0x2c
+ 8004308:	e9cd 4401 	strd	r4, r4, [sp, #4]
+ 800430c:	f7ff fe4a 	bl	8003fa4 <_ZN8touchgfx13GeneratedFontC1EPKNS_9GlyphNodeEttthhhhhhPKPKhPKNS_11KerningNodeEttPKtPKNS_24FontContextualFormsTableE>
+ 8004310:	4809      	ldr	r0, [pc, #36]	@ (8004338 <_Z24getFont_verdana_132_4bppv+0x74>)
+ 8004312:	f023 fc4b 	bl	8027bac <atexit>
+ 8004316:	4628      	mov	r0, r5
+ 8004318:	f023 f8bf 	bl	802749a <__cxa_guard_release>
+    return verdana_132_4bpp;
+}
+ 800431c:	4804      	ldr	r0, [pc, #16]	@ (8004330 <_Z24getFont_verdana_132_4bppv+0x6c>)
+ 800431e:	b00f      	add	sp, #60	@ 0x3c
+ 8004320:	bd30      	pop	{r4, r5, pc}
+ 8004322:	bf00      	nop
+ 8004324:	2400ed60 	.word	0x2400ed60
+ 8004328:	08036ea8 	.word	0x08036ea8
+ 800432c:	080370e0 	.word	0x080370e0
+ 8004330:	2400ed64 	.word	0x2400ed64
+ 8004334:	08037110 	.word	0x08037110
+ 8004338:	080042c1 	.word	0x080042c1
+
+0800433c <__tcf_0>:
 KEEP extern const touchgfx::KerningNode kerning_verdana_20_4bpp[] FONT_KERNING_LOCATION_FLASH_ATTRIBUTE;
 touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_20_4bpp()
 {
     static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 26, 20, 20, 0, 0, 4, 1, 0, 1, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
- 80042c0:	4770      	bx	lr
+ 800433c:	4770      	bx	lr
 	...
 
-080042c4 <_Z23getFont_verdana_20_4bppv>:
+08004340 <_Z23getFont_verdana_20_4bppv>:
 {
- 80042c4:	b530      	push	{r4, r5, lr}
+ 8004340:	b530      	push	{r4, r5, lr}
     static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 26, 20, 20, 0, 0, 4, 1, 0, 1, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
- 80042c6:	4d16      	ldr	r5, [pc, #88]	@ (8004320 <_Z23getFont_verdana_20_4bppv+0x5c>)
+ 8004342:	4d16      	ldr	r5, [pc, #88]	@ (800439c <_Z23getFont_verdana_20_4bppv+0x5c>)
 {
- 80042c8:	b08f      	sub	sp, #60	@ 0x3c
+ 8004344:	b08f      	sub	sp, #60	@ 0x3c
     static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 26, 20, 20, 0, 0, 4, 1, 0, 1, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
- 80042ca:	682c      	ldr	r4, [r5, #0]
- 80042cc:	f3bf 8f5b 	dmb	ish
- 80042d0:	f014 0401 	ands.w	r4, r4, #1
- 80042d4:	d121      	bne.n	800431a <_Z23getFont_verdana_20_4bppv+0x56>
- 80042d6:	4628      	mov	r0, r5
- 80042d8:	f023 f8d3 	bl	8027482 <__cxa_guard_acquire>
- 80042dc:	b1e8      	cbz	r0, 800431a <_Z23getFont_verdana_20_4bppv+0x56>
- 80042de:	233f      	movs	r3, #63	@ 0x3f
- 80042e0:	221a      	movs	r2, #26
- 80042e2:	4910      	ldr	r1, [pc, #64]	@ (8004324 <_Z23getFont_verdana_20_4bppv+0x60>)
- 80042e4:	9309      	str	r3, [sp, #36]	@ 0x24
- 80042e6:	4b10      	ldr	r3, [pc, #64]	@ (8004328 <_Z23getFont_verdana_20_4bppv+0x64>)
- 80042e8:	4810      	ldr	r0, [pc, #64]	@ (800432c <_Z23getFont_verdana_20_4bppv+0x68>)
- 80042ea:	9308      	str	r3, [sp, #32]
- 80042ec:	4b10      	ldr	r3, [pc, #64]	@ (8004330 <_Z23getFont_verdana_20_4bppv+0x6c>)
- 80042ee:	940a      	str	r4, [sp, #40]	@ 0x28
- 80042f0:	9307      	str	r3, [sp, #28]
- 80042f2:	2301      	movs	r3, #1
- 80042f4:	9401      	str	r4, [sp, #4]
- 80042f6:	9304      	str	r3, [sp, #16]
- 80042f8:	e9cd 4305 	strd	r4, r3, [sp, #20]
- 80042fc:	2304      	movs	r3, #4
- 80042fe:	e9cd 4302 	strd	r4, r3, [sp, #8]
- 8004302:	2314      	movs	r3, #20
- 8004304:	e9cd 440b 	strd	r4, r4, [sp, #44]	@ 0x2c
- 8004308:	9300      	str	r3, [sp, #0]
- 800430a:	f7ff fe4b 	bl	8003fa4 <_ZN8touchgfx13GeneratedFontC1EPKNS_9GlyphNodeEttthhhhhhPKPKhPKNS_11KerningNodeEttPKtPKNS_24FontContextualFormsTableE>
- 800430e:	4809      	ldr	r0, [pc, #36]	@ (8004334 <_Z23getFont_verdana_20_4bppv+0x70>)
- 8004310:	f023 fc4c 	bl	8027bac <atexit>
- 8004314:	4628      	mov	r0, r5
- 8004316:	f023 f8c0 	bl	802749a <__cxa_guard_release>
+ 8004346:	682c      	ldr	r4, [r5, #0]
+ 8004348:	f3bf 8f5b 	dmb	ish
+ 800434c:	f014 0401 	ands.w	r4, r4, #1
+ 8004350:	d121      	bne.n	8004396 <_Z23getFont_verdana_20_4bppv+0x56>
+ 8004352:	4628      	mov	r0, r5
+ 8004354:	f023 f895 	bl	8027482 <__cxa_guard_acquire>
+ 8004358:	b1e8      	cbz	r0, 8004396 <_Z23getFont_verdana_20_4bppv+0x56>
+ 800435a:	233f      	movs	r3, #63	@ 0x3f
+ 800435c:	221a      	movs	r2, #26
+ 800435e:	4910      	ldr	r1, [pc, #64]	@ (80043a0 <_Z23getFont_verdana_20_4bppv+0x60>)
+ 8004360:	9309      	str	r3, [sp, #36]	@ 0x24
+ 8004362:	4b10      	ldr	r3, [pc, #64]	@ (80043a4 <_Z23getFont_verdana_20_4bppv+0x64>)
+ 8004364:	4810      	ldr	r0, [pc, #64]	@ (80043a8 <_Z23getFont_verdana_20_4bppv+0x68>)
+ 8004366:	9308      	str	r3, [sp, #32]
+ 8004368:	4b10      	ldr	r3, [pc, #64]	@ (80043ac <_Z23getFont_verdana_20_4bppv+0x6c>)
+ 800436a:	940a      	str	r4, [sp, #40]	@ 0x28
+ 800436c:	9307      	str	r3, [sp, #28]
+ 800436e:	2301      	movs	r3, #1
+ 8004370:	9401      	str	r4, [sp, #4]
+ 8004372:	9304      	str	r3, [sp, #16]
+ 8004374:	e9cd 4305 	strd	r4, r3, [sp, #20]
+ 8004378:	2304      	movs	r3, #4
+ 800437a:	e9cd 4302 	strd	r4, r3, [sp, #8]
+ 800437e:	2314      	movs	r3, #20
+ 8004380:	e9cd 440b 	strd	r4, r4, [sp, #44]	@ 0x2c
+ 8004384:	9300      	str	r3, [sp, #0]
+ 8004386:	f7ff fe0d 	bl	8003fa4 <_ZN8touchgfx13GeneratedFontC1EPKNS_9GlyphNodeEttthhhhhhPKPKhPKNS_11KerningNodeEttPKtPKNS_24FontContextualFormsTableE>
+ 800438a:	4809      	ldr	r0, [pc, #36]	@ (80043b0 <_Z23getFont_verdana_20_4bppv+0x70>)
+ 800438c:	f023 fc0e 	bl	8027bac <atexit>
+ 8004390:	4628      	mov	r0, r5
+ 8004392:	f023 f882 	bl	802749a <__cxa_guard_release>
     return verdana_20_4bpp;
 }
- 800431a:	4804      	ldr	r0, [pc, #16]	@ (800432c <_Z23getFont_verdana_20_4bppv+0x68>)
- 800431c:	b00f      	add	sp, #60	@ 0x3c
- 800431e:	bd30      	pop	{r4, r5, pc}
- 8004320:	2400ed60 	.word	0x2400ed60
- 8004324:	08031e28 	.word	0x08031e28
- 8004328:	08032060 	.word	0x08032060
- 800432c:	2400ed64 	.word	0x2400ed64
- 8004330:	08032090 	.word	0x08032090
- 8004334:	080042c1 	.word	0x080042c1
+ 8004396:	4804      	ldr	r0, [pc, #16]	@ (80043a8 <_Z23getFont_verdana_20_4bppv+0x68>)
+ 8004398:	b00f      	add	sp, #60	@ 0x3c
+ 800439a:	bd30      	pop	{r4, r5, pc}
+ 800439c:	2400ed90 	.word	0x2400ed90
+ 80043a0:	08036f44 	.word	0x08036f44
+ 80043a4:	080370e4 	.word	0x080370e4
+ 80043a8:	2400ed94 	.word	0x2400ed94
+ 80043ac:	08037114 	.word	0x08037114
+ 80043b0:	0800433d 	.word	0x0800433d
 
-08004338 <__tcf_0>:
+080043b4 <__tcf_0>:
 KEEP extern const touchgfx::KerningNode kerning_verdana_41_4bpp[] FONT_KERNING_LOCATION_FLASH_ATTRIBUTE;
 touchgfx::GeneratedFont& getFont_verdana_41_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_41_4bpp()
 {
     static touchgfx::GeneratedFont verdana_41_4bpp(glyphs_verdana_41_4bpp, 3, 42, 41, 0, 0, 4, 1, 0, 0, unicodes_verdana_41_4bpp, kerning_verdana_41_4bpp, 63, 0, 0, 0);
- 8004338:	4770      	bx	lr
-	...
-
-0800433c <_Z23getFont_verdana_41_4bppv>:
-{
- 800433c:	b530      	push	{r4, r5, lr}
-    static touchgfx::GeneratedFont verdana_41_4bpp(glyphs_verdana_41_4bpp, 3, 42, 41, 0, 0, 4, 1, 0, 0, unicodes_verdana_41_4bpp, kerning_verdana_41_4bpp, 63, 0, 0, 0);
- 800433e:	4d17      	ldr	r5, [pc, #92]	@ (800439c <_Z23getFont_verdana_41_4bppv+0x60>)
-{
- 8004340:	b08f      	sub	sp, #60	@ 0x3c
-    static touchgfx::GeneratedFont verdana_41_4bpp(glyphs_verdana_41_4bpp, 3, 42, 41, 0, 0, 4, 1, 0, 0, unicodes_verdana_41_4bpp, kerning_verdana_41_4bpp, 63, 0, 0, 0);
- 8004342:	682c      	ldr	r4, [r5, #0]
- 8004344:	f3bf 8f5b 	dmb	ish
- 8004348:	f014 0401 	ands.w	r4, r4, #1
- 800434c:	d122      	bne.n	8004394 <_Z23getFont_verdana_41_4bppv+0x58>
- 800434e:	4628      	mov	r0, r5
- 8004350:	f023 f897 	bl	8027482 <__cxa_guard_acquire>
- 8004354:	b1f0      	cbz	r0, 8004394 <_Z23getFont_verdana_41_4bppv+0x58>
- 8004356:	233f      	movs	r3, #63	@ 0x3f
- 8004358:	2201      	movs	r2, #1
- 800435a:	4911      	ldr	r1, [pc, #68]	@ (80043a0 <_Z23getFont_verdana_41_4bppv+0x64>)
- 800435c:	9309      	str	r3, [sp, #36]	@ 0x24
- 800435e:	4b11      	ldr	r3, [pc, #68]	@ (80043a4 <_Z23getFont_verdana_41_4bppv+0x68>)
- 8004360:	4811      	ldr	r0, [pc, #68]	@ (80043a8 <_Z23getFont_verdana_41_4bppv+0x6c>)
- 8004362:	9308      	str	r3, [sp, #32]
- 8004364:	4b11      	ldr	r3, [pc, #68]	@ (80043ac <_Z23getFont_verdana_41_4bppv+0x70>)
- 8004366:	940a      	str	r4, [sp, #40]	@ 0x28
- 8004368:	9405      	str	r4, [sp, #20]
- 800436a:	e9cd 4306 	strd	r4, r3, [sp, #24]
- 800436e:	2304      	movs	r3, #4
- 8004370:	e9cd 3203 	strd	r3, r2, [sp, #12]
- 8004374:	2329      	movs	r3, #41	@ 0x29
- 8004376:	2203      	movs	r2, #3
- 8004378:	9300      	str	r3, [sp, #0]
- 800437a:	232a      	movs	r3, #42	@ 0x2a
- 800437c:	e9cd 440b 	strd	r4, r4, [sp, #44]	@ 0x2c
- 8004380:	e9cd 4401 	strd	r4, r4, [sp, #4]
- 8004384:	f7ff fe0e 	bl	8003fa4 <_ZN8touchgfx13GeneratedFontC1EPKNS_9GlyphNodeEttthhhhhhPKPKhPKNS_11KerningNodeEttPKtPKNS_24FontContextualFormsTableE>
- 8004388:	4809      	ldr	r0, [pc, #36]	@ (80043b0 <_Z23getFont_verdana_41_4bppv+0x74>)
- 800438a:	f023 fc0f 	bl	8027bac <atexit>
- 800438e:	4628      	mov	r0, r5
- 8004390:	f023 f883 	bl	802749a <__cxa_guard_release>
-    return verdana_41_4bpp;
-}
- 8004394:	4804      	ldr	r0, [pc, #16]	@ (80043a8 <_Z23getFont_verdana_41_4bppv+0x6c>)
- 8004396:	b00f      	add	sp, #60	@ 0x3c
- 8004398:	bd30      	pop	{r4, r5, pc}
- 800439a:	bf00      	nop
- 800439c:	2400ed90 	.word	0x2400ed90
- 80043a0:	08031f94 	.word	0x08031f94
- 80043a4:	08032084 	.word	0x08032084
- 80043a8:	2400ed94 	.word	0x2400ed94
- 80043ac:	08032094 	.word	0x08032094
- 80043b0:	08004339 	.word	0x08004339
-
-080043b4 <__tcf_0>:
-KEEP extern const touchgfx::KerningNode kerning_verdana_85_4bpp[] FONT_KERNING_LOCATION_FLASH_ATTRIBUTE;
-touchgfx::GeneratedFont& getFont_verdana_85_4bpp();
-
-touchgfx::GeneratedFont& getFont_verdana_85_4bpp()
-{
-    static touchgfx::GeneratedFont verdana_85_4bpp(glyphs_verdana_85_4bpp, 11, 86, 85, 0, 0, 4, 1, 0, 0, unicodes_verdana_85_4bpp, kerning_verdana_85_4bpp, 63, 0, 0, 0);
  80043b4:	4770      	bx	lr
 	...
 
-080043b8 <_Z23getFont_verdana_85_4bppv>:
+080043b8 <_Z23getFont_verdana_41_4bppv>:
 {
  80043b8:	b530      	push	{r4, r5, lr}
-    static touchgfx::GeneratedFont verdana_85_4bpp(glyphs_verdana_85_4bpp, 11, 86, 85, 0, 0, 4, 1, 0, 0, unicodes_verdana_85_4bpp, kerning_verdana_85_4bpp, 63, 0, 0, 0);
- 80043ba:	4d17      	ldr	r5, [pc, #92]	@ (8004418 <_Z23getFont_verdana_85_4bppv+0x60>)
+    static touchgfx::GeneratedFont verdana_41_4bpp(glyphs_verdana_41_4bpp, 3, 42, 41, 0, 0, 4, 1, 0, 0, unicodes_verdana_41_4bpp, kerning_verdana_41_4bpp, 63, 0, 0, 0);
+ 80043ba:	4d17      	ldr	r5, [pc, #92]	@ (8004418 <_Z23getFont_verdana_41_4bppv+0x60>)
 {
  80043bc:	b08f      	sub	sp, #60	@ 0x3c
-    static touchgfx::GeneratedFont verdana_85_4bpp(glyphs_verdana_85_4bpp, 11, 86, 85, 0, 0, 4, 1, 0, 0, unicodes_verdana_85_4bpp, kerning_verdana_85_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdana_41_4bpp(glyphs_verdana_41_4bpp, 3, 42, 41, 0, 0, 4, 1, 0, 0, unicodes_verdana_41_4bpp, kerning_verdana_41_4bpp, 63, 0, 0, 0);
  80043be:	682c      	ldr	r4, [r5, #0]
  80043c0:	f3bf 8f5b 	dmb	ish
  80043c4:	f014 0401 	ands.w	r4, r4, #1
- 80043c8:	d122      	bne.n	8004410 <_Z23getFont_verdana_85_4bppv+0x58>
+ 80043c8:	d122      	bne.n	8004410 <_Z23getFont_verdana_41_4bppv+0x58>
  80043ca:	4628      	mov	r0, r5
  80043cc:	f023 f859 	bl	8027482 <__cxa_guard_acquire>
- 80043d0:	b1f0      	cbz	r0, 8004410 <_Z23getFont_verdana_85_4bppv+0x58>
+ 80043d0:	b1f0      	cbz	r0, 8004410 <_Z23getFont_verdana_41_4bppv+0x58>
  80043d2:	233f      	movs	r3, #63	@ 0x3f
  80043d4:	2201      	movs	r2, #1
- 80043d6:	4911      	ldr	r1, [pc, #68]	@ (800441c <_Z23getFont_verdana_85_4bppv+0x64>)
+ 80043d6:	4911      	ldr	r1, [pc, #68]	@ (800441c <_Z23getFont_verdana_41_4bppv+0x64>)
  80043d8:	9309      	str	r3, [sp, #36]	@ 0x24
- 80043da:	4b11      	ldr	r3, [pc, #68]	@ (8004420 <_Z23getFont_verdana_85_4bppv+0x68>)
- 80043dc:	4811      	ldr	r0, [pc, #68]	@ (8004424 <_Z23getFont_verdana_85_4bppv+0x6c>)
+ 80043da:	4b11      	ldr	r3, [pc, #68]	@ (8004420 <_Z23getFont_verdana_41_4bppv+0x68>)
+ 80043dc:	4811      	ldr	r0, [pc, #68]	@ (8004424 <_Z23getFont_verdana_41_4bppv+0x6c>)
  80043de:	9308      	str	r3, [sp, #32]
- 80043e0:	4b11      	ldr	r3, [pc, #68]	@ (8004428 <_Z23getFont_verdana_85_4bppv+0x70>)
+ 80043e0:	4b11      	ldr	r3, [pc, #68]	@ (8004428 <_Z23getFont_verdana_41_4bppv+0x70>)
  80043e2:	940a      	str	r4, [sp, #40]	@ 0x28
  80043e4:	9405      	str	r4, [sp, #20]
  80043e6:	e9cd 4306 	strd	r4, r3, [sp, #24]
  80043ea:	2304      	movs	r3, #4
  80043ec:	e9cd 3203 	strd	r3, r2, [sp, #12]
- 80043f0:	2355      	movs	r3, #85	@ 0x55
- 80043f2:	220b      	movs	r2, #11
+ 80043f0:	2329      	movs	r3, #41	@ 0x29
+ 80043f2:	2203      	movs	r2, #3
  80043f4:	9300      	str	r3, [sp, #0]
- 80043f6:	2356      	movs	r3, #86	@ 0x56
+ 80043f6:	232a      	movs	r3, #42	@ 0x2a
  80043f8:	e9cd 440b 	strd	r4, r4, [sp, #44]	@ 0x2c
  80043fc:	e9cd 4401 	strd	r4, r4, [sp, #4]
  8004400:	f7ff fdd0 	bl	8003fa4 <_ZN8touchgfx13GeneratedFontC1EPKNS_9GlyphNodeEttthhhhhhPKPKhPKNS_11KerningNodeEttPKtPKNS_24FontContextualFormsTableE>
- 8004404:	4809      	ldr	r0, [pc, #36]	@ (800442c <_Z23getFont_verdana_85_4bppv+0x74>)
+ 8004404:	4809      	ldr	r0, [pc, #36]	@ (800442c <_Z23getFont_verdana_41_4bppv+0x74>)
  8004406:	f023 fbd1 	bl	8027bac <atexit>
  800440a:	4628      	mov	r0, r5
  800440c:	f023 f845 	bl	802749a <__cxa_guard_release>
-    return verdana_85_4bpp;
+    return verdana_41_4bpp;
 }
- 8004410:	4804      	ldr	r0, [pc, #16]	@ (8004424 <_Z23getFont_verdana_85_4bppv+0x6c>)
+ 8004410:	4804      	ldr	r0, [pc, #16]	@ (8004424 <_Z23getFont_verdana_41_4bppv+0x6c>)
  8004412:	b00f      	add	sp, #60	@ 0x3c
  8004414:	bd30      	pop	{r4, r5, pc}
  8004416:	bf00      	nop
  8004418:	2400edc0 	.word	0x2400edc0
- 800441c:	08031fc0 	.word	0x08031fc0
- 8004420:	08032088 	.word	0x08032088
+ 800441c:	080370b0 	.word	0x080370b0
+ 8004420:	08037108 	.word	0x08037108
  8004424:	2400edc4 	.word	0x2400edc4
- 8004428:	08032098 	.word	0x08032098
+ 8004428:	08037118 	.word	0x08037118
  800442c:	080043b5 	.word	0x080043b5
 
 08004430 <_ZNK8touchgfx4Font12getGSUBTableEv>:
@@ -11713,9 +11713,9 @@ void touchgfx::Texts::setLanguage(touchgfx::LanguageId id)
  800457c:	24028e78 	.word	0x24028e78
  8004580:	24028e80 	.word	0x24028e80
  8004584:	24028e7c 	.word	0x24028e7c
- 8004588:	90ff661c 	.word	0x90ff661c
- 800458c:	90ff65e0 	.word	0x90ff65e0
- 8004590:	90ff6658 	.word	0x90ff6658
+ 8004588:	910040dc 	.word	0x910040dc
+ 800458c:	910040a0 	.word	0x910040a0
+ 8004590:	91004118 	.word	0x91004118
 
 08004594 <_ZNK8touchgfx5Texts7getTextEt>:
     languagesArray[id] = (const TranslationHeader*)translation;
@@ -11758,7 +11758,7 @@ const touchgfx::Font** getFonts()
 
 080045bc <_GLOBAL__sub_I_touchgfx_fonts>:
     case 3:
-        touchgfx_fonts[3] = &(getFont_verdana_85_4bpp());
+        touchgfx_fonts[3] = &(getFont_verdana_132_4bpp());
         break;
     }
 }
@@ -11767,19 +11767,19 @@ const touchgfx::Font** getFonts()
 };
  80045be:	4c07      	ldr	r4, [pc, #28]	@ (80045dc <_GLOBAL__sub_I_touchgfx_fonts+0x20>)
     &(getFont_verdana_20_4bpp()),
- 80045c0:	f7ff fe80 	bl	80042c4 <_Z23getFont_verdana_20_4bppv>
+ 80045c0:	f7ff febe 	bl	8004340 <_Z23getFont_verdana_20_4bppv>
 };
  80045c4:	6020      	str	r0, [r4, #0]
     &(getFont_verdana_41_4bpp()),
- 80045c6:	f7ff feb9 	bl	800433c <_Z23getFont_verdana_41_4bppv>
+ 80045c6:	f7ff fef7 	bl	80043b8 <_Z23getFont_verdana_41_4bppv>
 };
  80045ca:	6060      	str	r0, [r4, #4]
     &(getFont_verdana_10_4bpp()),
  80045cc:	f7ff fe3e 	bl	800424c <_Z23getFont_verdana_10_4bppv>
 };
  80045d0:	60a0      	str	r0, [r4, #8]
-    &(getFont_verdana_85_4bpp())
- 80045d2:	f7ff fef1 	bl	80043b8 <_Z23getFont_verdana_85_4bppv>
+    &(getFont_verdana_132_4bpp())
+ 80045d2:	f7ff fe77 	bl	80042c4 <_Z24getFont_verdana_132_4bppv>
 };
  80045d6:	60e0      	str	r0, [r4, #12]
 } // namespace TypedTextDatabase
@@ -13565,9 +13565,9 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
  80050c2:	f00b fb1d 	bl	8010700 <_ZN8touchgfx14SwipeContainer23setEndSwipeElasticWidthEt>
         rect.width = width;
  80050c6:	4b1c      	ldr	r3, [pc, #112]	@ (8005138 <_ZN23graphing_ScreenViewBaseC1Ev+0x3c8>)
-    car.setXY(59, 307);
+    car.setXY(59, 319);
  80050c8:	4638      	mov	r0, r7
- 80050ca:	f240 1233 	movw	r2, #307	@ 0x133
+ 80050ca:	f240 123f 	movw	r2, #319	@ 0x13f
  80050ce:	f8c4 322c 	str.w	r3, [r4, #556]	@ 0x22c
  80050d2:	213b      	movs	r1, #59	@ 0x3b
  80050d4:	f7fe ffd1 	bl	800407a <_ZN8touchgfx8Drawable5setXYEss>
@@ -13698,13 +13698,13 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
  80051f4:	9908      	ldr	r1, [sp, #32]
  80051f6:	4650      	mov	r0, sl
  80051f8:	f00a fcf5 	bl	800fbe6 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    mph.setPosition(111, 92, 151, 85);
- 80051fc:	2355      	movs	r3, #85	@ 0x55
- 80051fe:	225c      	movs	r2, #92	@ 0x5c
- 8005200:	216f      	movs	r1, #111	@ 0x6f
+    mph.setPosition(61, 59, 250, 148);
+ 80051fc:	2394      	movs	r3, #148	@ 0x94
+ 80051fe:	223b      	movs	r2, #59	@ 0x3b
+ 8005200:	213d      	movs	r1, #61	@ 0x3d
  8005202:	9809      	ldr	r0, [sp, #36]	@ 0x24
  8005204:	9300      	str	r3, [sp, #0]
- 8005206:	2397      	movs	r3, #151	@ 0x97
+ 8005206:	23fa      	movs	r3, #250	@ 0xfa
  8005208:	f7fe ff44 	bl	8004094 <_ZN8touchgfx8Drawable11setPositionEssss>
  800520c:	f8d4 3384 	ldr.w	r3, [r4, #900]	@ 0x384
  8005210:	9909      	ldr	r1, [sp, #36]	@ 0x24
@@ -14141,10 +14141,10 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
  80055a4:	9903      	ldr	r1, [sp, #12]
  80055a6:	4658      	mov	r0, fp
  80055a8:	f00a fb1d 	bl	800fbe6 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    slider1.setXY(570, 448);
+    slider1.setXY(568, 441);
  80055ac:	9806      	ldr	r0, [sp, #24]
- 80055ae:	f44f 72e0 	mov.w	r2, #448	@ 0x1c0
- 80055b2:	f240 213a 	movw	r1, #570	@ 0x23a
+ 80055ae:	f240 12b9 	movw	r2, #441	@ 0x1b9
+ 80055b2:	f44f 710e 	mov.w	r1, #568	@ 0x238
  80055b6:	f7fe fd60 	bl	800407a <_ZN8touchgfx8Drawable5setXYEss>
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
  80055ba:	ab1e      	add	r3, sp, #120	@ 0x78
@@ -14711,10 +14711,10 @@ right_containerBase::right_containerBase()
  8005a16:	4659      	mov	r1, fp
  8005a18:	4650      	mov	r0, sl
  8005a1a:	f00a f8e4 	bl	800fbe6 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    gauge_left_progress.setXY(54, 53);
+    gauge_left_progress.setXY(73, 49);
  8005a1e:	4638      	mov	r0, r7
- 8005a20:	2235      	movs	r2, #53	@ 0x35
- 8005a22:	2136      	movs	r1, #54	@ 0x36
+ 8005a20:	2231      	movs	r2, #49	@ 0x31
+ 8005a22:	2149      	movs	r1, #73	@ 0x49
  8005a24:	f7fe fb29 	bl	800407a <_ZN8touchgfx8Drawable5setXYEss>
     gauge_left_progress.setProgressIndicatorPosition(0, 0, 200, 280);
  8005a28:	f44f 738c 	mov.w	r3, #280	@ 0x118
@@ -77880,10 +77880,10 @@ Timer_t * const pxTimer = ( Timer_t * ) listGET_OWNER_OF_HEAD_ENTRY( pxCurrentTi
  802824e:	4798      	blx	r3
  8028250:	3601      	adds	r6, #1
  8028252:	e7f2      	b.n	802823a <__libc_init_array+0x1e>
- 8028254:	080320a4 	.word	0x080320a4
- 8028258:	080320a4 	.word	0x080320a4
- 802825c:	080320a4 	.word	0x080320a4
- 8028260:	080320c0 	.word	0x080320c0
+ 8028254:	08037124 	.word	0x08037124
+ 8028258:	08037124 	.word	0x08037124
+ 802825c:	08037124 	.word	0x08037124
+ 8028260:	08037140 	.word	0x08037140
 
 08028264 <__retarget_lock_init_recursive>:
  8028264:	4770      	bx	lr

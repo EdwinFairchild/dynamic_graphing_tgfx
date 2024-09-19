@@ -42,32 +42,32 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
 
     car_container.setWidth(364);
     car_container.setHeight(481);
-    car.setXY(59, 307);
+    car.setXY(59, 319);
     car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
     car.setUpdateTicksInterval(2);
     car.startAnimation(false, true, false);
     car.setDoneAction(animationEndedCallback);
     car_container.add(car);
 
-    circle.setXY(57, 308);
+    circle.setXY(52, 310);
     circle.setBitmap(touchgfx::Bitmap(BITMAP_CIRCLE_ID));
     car_container.add(circle);
 
-    Image4.setXY(228, 146);
+    Image4.setXY(245, 174);
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
     car_container.add(Image4);
 
-    image5.setXY(-11, 144);
+    image5.setXY(-26, 151);
     image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
     car_container.add(image5);
 
-    mph_lable.setPosition(112, 199, 151, 28);
+    mph_lable.setPosition(109, 199, 151, 28);
     mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph_lable.setLinespacing(0);
     mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
     car_container.add(mph_lable);
 
-    mph.setPosition(61, 59, 250, 148);
+    mph.setPosition(59, 59, 250, 148);
     mph.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph.setLinespacing(0);
     Unicode::snprintf(mphBuffer, MPH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_49UH).getText());
@@ -143,7 +143,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
 
-    slider1.setXY(570, 448);
+    slider1.setXY(14, 385);
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
     slider1.setupHorizontalSlider(16, 11, 0, 0, 200);
     slider1.setValueRange(0, 200);
