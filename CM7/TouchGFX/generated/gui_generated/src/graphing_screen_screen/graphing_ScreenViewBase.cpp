@@ -159,7 +159,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     digitalClock1.setTime12Hour(10, 10, 0, true);
     add(digitalClock1);
 
-    battery_level.setXY(629, -5);
+    battery_level.setXY(619, 13);
     battery_level.setProgressIndicatorPosition(0, 0, 163, 388);
     battery_level.setRange(0, 100);
     battery_level.setDirection(touchgfx::AbstractDirectionProgress::UP);
@@ -169,7 +169,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     battery_level.setAnchorAtZero(true);
     add(battery_level);
 
-    right_container1.setXY(2, -5);
+    right_container1.setXY(2, 1);
     add(right_container1);
 }
 

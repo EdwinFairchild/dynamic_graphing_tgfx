@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+*.cyclo
 
 # Linker output
 *.ilk
@@ -29,7 +30,7 @@
 *.dylib
 
 # Executables
-*.exe
+
 *.out
 *.app
 *.i*86

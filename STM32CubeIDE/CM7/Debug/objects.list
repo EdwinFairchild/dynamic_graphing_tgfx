@@ -118,8 +118,6 @@
 "./Application/User/generated/image_gauge.o"
 "./Application/User/generated/image_left_gauge_bg.o"
 "./Application/User/generated/image_left_gauge_fill.o"
-"./Application/User/generated/image_needle.o"
-"./Application/User/generated/image_needle_2.o"
 "./Application/User/generated/image_needle_3.o"
 "./Application/User/generated/image_speed-highlight.o"
 "./Application/User/generated/image_swipe_container_pager.o"

@@ -363,8 +363,8 @@
           {
             "Type": "ImageProgress",
             "Name": "battery_level",
-            "X": 629,
-            "Y": -5,
+            "X": 619,
+            "Y": 13,
             "Width": 163,
             "Height": 388,
             "FileNameProgress": "battery_fill.png",
@@ -380,7 +380,7 @@
             "Type": "CustomContainerInstance",
             "Name": "right_container1",
             "X": 2,
-            "Y": -5,
+            "Y": 1,
             "Width": 256,
             "Height": 396,
             "CustomContainerDefinitionName": "right_container"
@@ -549,7 +549,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "graphing_Screen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

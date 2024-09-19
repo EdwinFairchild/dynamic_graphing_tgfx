@@ -56,8 +56,7 @@ right_containerBase::right_containerBase()
     page1.setSelectedPage(0);
     add(page1);
 
-    gauge_left.setWidth(256);
-    gauge_left.setHeight(396);
+    gauge_left.setPosition(0, 0, 256, 396);
     add(gauge_left);
 }
 
