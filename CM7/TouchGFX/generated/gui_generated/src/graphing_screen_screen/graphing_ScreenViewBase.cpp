@@ -143,7 +143,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
 
-    slider1.setXY(14, 385);
+    slider1.setXY(8, 414);
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
     slider1.setupHorizontalSlider(16, 11, 0, 0, 200);
     slider1.setValueRange(0, 200);

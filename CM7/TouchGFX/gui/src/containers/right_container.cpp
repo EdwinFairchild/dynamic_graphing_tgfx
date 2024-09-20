@@ -23,7 +23,9 @@ void right_container::setLeftGaugeValue(int value) {
 void right_container::setAlpha(uint8_t alpha) {
     temp_progress.setAlpha(alpha);
     temp_text_area.setAlpha(alpha);
+    gauge_left_progress.setAlpha(alpha);
     temp_progress.invalidate();
     temp_text_area.invalidate();
+    gauge_left_progress.invalidate();
 }
 

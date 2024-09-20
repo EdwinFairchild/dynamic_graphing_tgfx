@@ -328,8 +328,8 @@
           {
             "Type": "Slider",
             "Name": "slider1",
-            "X": 14,
-            "Y": 385,
+            "X": 8,
+            "Y": 414,
             "Width": 232,
             "Height": 32,
             "IsHorizontalSlider": true,
