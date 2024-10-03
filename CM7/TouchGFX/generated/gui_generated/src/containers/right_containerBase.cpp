@@ -20,11 +20,11 @@ right_containerBase::right_containerBase()
     right_temp_page.setHeight(396);
     temp_progress.setXY(4, -20);
     temp_progress.setProgressIndicatorPosition(0, 0, 163, 388);
-    temp_progress.setRange(0, 100);
+    temp_progress.setRange(0, 200);
     temp_progress.setDirection(touchgfx::AbstractDirectionProgress::UP);
     temp_progress.setBackground(touchgfx::Bitmap(BITMAP_TEMP_BG_ID));
     temp_progress.setBitmap(BITMAP_TEMP_COLOR_ID);
-    temp_progress.setValue(63);
+    temp_progress.setValue(100);
     temp_progress.setAnchorAtZero(true);
     right_temp_page.add(temp_progress);
 

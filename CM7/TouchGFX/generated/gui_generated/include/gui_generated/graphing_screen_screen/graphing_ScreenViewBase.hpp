@@ -56,7 +56,7 @@ protected:
     touchgfx::Box box1;
     touchgfx::Box box2;
     touchgfx::FadeAnimator< touchgfx::Image > background;
-    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::SwipeContainer main_container;
     touchgfx::Container car_container;
     touchgfx::AnimatedImage car;
     touchgfx::FadeAnimator< touchgfx::MoveAnimator< touchgfx::Image > > circle;
@@ -72,6 +72,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard pres_fr;
     touchgfx::TextAreaWithOneWildcard pres_rr;
     touchgfx::TextAreaWithOneWildcard pres_rl;
+    touchgfx::Container map_page;
+    touchgfx::MoveAnimator< touchgfx::Image > map_bg;
+    touchgfx::Image map_mask;
+    touchgfx::Image arrow;
     touchgfx::Slider slider1;
     touchgfx::DigitalClock digitalClock1;
     touchgfx::ImageProgress battery_level;

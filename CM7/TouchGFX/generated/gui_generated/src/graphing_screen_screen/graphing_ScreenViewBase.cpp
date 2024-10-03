@@ -26,48 +26,48 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     box1.setColor(touchgfx::Color::getColorFromRGB(54, 53, 59));
     add(box1);
 
-    box2.setPosition(0, 0, 800, 480);
+    box2.setPosition(0, 1, 800, 480);
     box2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box2);
 
-    background.setXY(-2, 0);
+    background.setXY(0, 0);
     background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
     add(background);
 
-    swipeContainer1.setXY(216, 1);
-    swipeContainer1.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID), touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID));
-    swipeContainer1.setPageIndicatorXY(0, 0);
-    swipeContainer1.setSwipeCutoff(50);
-    swipeContainer1.setEndSwipeElasticWidth(50);
+    main_container.setXY(221, 44);
+    main_container.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID), touchgfx::Bitmap(BITMAP_SWIPE_CONTAINER_PAGER_ID));
+    main_container.setPageIndicatorXY(0, 0);
+    main_container.setSwipeCutoff(50);
+    main_container.setEndSwipeElasticWidth(50);
 
-    car_container.setWidth(364);
-    car_container.setHeight(481);
-    car.setXY(59, 319);
-    car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_55_ID);
-    car.setUpdateTicksInterval(2);
+    car_container.setWidth(362);
+    car_container.setHeight(426);
+    car.setXY(50, 259);
+    car.setBitmaps(BITMAP_CAR_00_ID, BITMAP_CAR_47_ID);
+    car.setUpdateTicksInterval(4);
     car.startAnimation(false, true, false);
     car.setDoneAction(animationEndedCallback);
     car_container.add(car);
 
-    circle.setXY(52, 310);
+    circle.setXY(53, 280);
     circle.setBitmap(touchgfx::Bitmap(BITMAP_CIRCLE_ID));
     car_container.add(circle);
 
-    Image4.setXY(245, 174);
+    Image4.setXY(253, 200);
     Image4.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_19_ID));
     car_container.add(Image4);
 
-    image5.setXY(-26, 151);
+    image5.setXY(-34, 169);
     image5.setBitmap(touchgfx::Bitmap(BITMAP_VECTOR_20_ID));
     car_container.add(image5);
 
-    mph_lable.setPosition(109, 199, 151, 28);
+    mph_lable.setPosition(98, 149, 151, 28);
     mph_lable.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph_lable.setLinespacing(0);
     mph_lable.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z0UY));
     car_container.add(mph_lable);
 
-    mph.setPosition(59, 59, 250, 148);
+    mph.setPosition(48, -5, 250, 148);
     mph.setColor(touchgfx::Color::getColorFromRGB(102, 102, 102));
     mph.setLinespacing(0);
     Unicode::snprintf(mphBuffer, MPH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_49UH).getText());
@@ -94,15 +94,15 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setArcPosition(33, 33, 270, 198);
     car_container.add(gauge1);
 
-    swipeContainer1.add(car_container);
+    main_container.add(car_container);
 
-    tire_pres_pg.setWidth(364);
-    tire_pres_pg.setHeight(481);
-    tire_pre.setXY(4, 146);
+    tire_pres_pg.setWidth(362);
+    tire_pres_pg.setHeight(426);
+    tire_pre.setXY(2, -8);
     tire_pre.setBitmap(touchgfx::Bitmap(BITMAP_TIRE_PRESSURE_1_ID));
     tire_pres_pg.add(tire_pre);
 
-    pres_fl.setXY(97, 275);
+    pres_fl.setXY(97, 115);
     pres_fl.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     pres_fl.setLinespacing(0);
     Unicode::snprintf(pres_flBuffer, PRES_FL_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_P78H).getText());
@@ -111,7 +111,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     pres_fl.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ED0G));
     tire_pres_pg.add(pres_fl);
 
-    pres_fr.setXY(245, 275);
+    pres_fr.setXY(245, 115);
     pres_fr.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
     pres_fr.setLinespacing(0);
     Unicode::snprintf(pres_frBuffer, PRES_FR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ONR6).getText());
@@ -120,7 +120,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     pres_fr.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4JZO));
     tire_pres_pg.add(pres_fr);
 
-    pres_rr.setXY(246, 383);
+    pres_rr.setXY(246, 223);
     pres_rr.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
     pres_rr.setLinespacing(0);
     Unicode::snprintf(pres_rrBuffer, PRES_RR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DATJ).getText());
@@ -129,7 +129,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     pres_rr.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BWD6));
     tire_pres_pg.add(pres_rr);
 
-    pres_rl.setXY(96, 383);
+    pres_rl.setXY(96, 223);
     pres_rl.setColor(touchgfx::Color::getColorFromRGB(66, 76, 255));
     pres_rl.setLinespacing(0);
     Unicode::snprintf(pres_rlBuffer, PRES_RL_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_JSZ2).getText());
@@ -138,12 +138,28 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     pres_rl.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9P52));
     tire_pres_pg.add(pres_rl);
 
-    swipeContainer1.add(tire_pres_pg);
+    main_container.add(tire_pres_pg);
 
-    swipeContainer1.setSelectedPage(0);
-    add(swipeContainer1);
+    map_page.setWidth(362);
+    map_page.setHeight(426);
+    map_bg.setXY(31, -1179);
+    map_bg.setBitmap(touchgfx::Bitmap(BITMAP_MAP_BG_ID));
+    map_page.add(map_bg);
 
-    slider1.setXY(8, 414);
+    map_mask.setXY(31, -4);
+    map_mask.setBitmap(touchgfx::Bitmap(BITMAP_MAP_MASK_ID));
+    map_page.add(map_mask);
+
+    arrow.setXY(112, 233);
+    arrow.setBitmap(touchgfx::Bitmap(BITMAP_ARROW_ID));
+    map_page.add(arrow);
+
+    main_container.add(map_page);
+
+    main_container.setSelectedPage(0);
+    add(main_container);
+
+    slider1.setXY(2, 438);
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_SMALL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUND_LIGHT_ID));
     slider1.setupHorizontalSlider(16, 11, 0, 0, 200);
     slider1.setValueRange(0, 200);
@@ -189,9 +205,9 @@ void graphing_ScreenViewBase::animationEndedCallbackHandler(const touchgfx::Anim
     {
         //Interaction2
         //When car animation ended fade gauge1
-        //Fade gauge1 to alpha:255 with LinearIn easing in 500 ms (30 Ticks)
+        //Fade gauge1 to alpha:255 with LinearIn easing in 1000 ms (60 Ticks)
         gauge1.clearFadeAnimationEndedAction();
-        gauge1.startFadeAnimation(255, 30, touchgfx::EasingEquations::linearEaseIn);
+        gauge1.startFadeAnimation(255, 60, touchgfx::EasingEquations::linearEaseIn);
         gauge1.setFadeAnimationEndedAction(interaction2EndedCallback);
     }
 }

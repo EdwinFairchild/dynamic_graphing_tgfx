@@ -802,6 +802,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_Vector_22.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_arrow.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_arrow.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_battery_bg.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_battery_bg.cpp</locationURI>
@@ -1120,6 +1125,16 @@
 			<name>Application/User/generated/image_left_gauge_fill.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_left_gauge_fill.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_map_bg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_map_bg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_map_mask.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_map_mask.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_needle_3.cpp</name>

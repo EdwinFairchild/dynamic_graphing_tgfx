@@ -58,6 +58,7 @@
             "Name": "container1",
             "Width": 800,
             "Height": 480,
+            "LockPosition": true,
             "Components": []
           },
           {
@@ -65,6 +66,7 @@
             "Name": "box1",
             "Width": 800,
             "Height": 480,
+            "LockPosition": true,
             "Color": {
               "Red": 54,
               "Green": 53,
@@ -74,13 +76,14 @@
           {
             "Type": "Box",
             "Name": "box2",
+            "Y": 1,
             "Width": 800,
-            "Height": 480
+            "Height": 480,
+            "LockPosition": true
           },
           {
             "Type": "Image",
             "Name": "background",
-            "X": -2,
             "Width": 800,
             "Height": 480,
             "LockPosition": true,
@@ -88,11 +91,11 @@
           },
           {
             "Type": "SwipeContainer",
-            "Name": "swipeContainer1",
-            "X": 216,
-            "Y": 1,
-            "Width": 364,
-            "Height": 481,
+            "Name": "main_container",
+            "X": 221,
+            "Y": 44,
+            "Width": 362,
+            "Height": 426,
             "SwipeCutoff": 50,
             "ShowPageIndicator": true,
             "IndicatorImageNormal": "swipe_container_pager.png",
@@ -103,29 +106,33 @@
               {
                 "Type": "Container",
                 "Name": "car_container",
-                "Y": -1,
-                "Width": 364,
-                "Height": 481,
+                "X": 6,
+                "Y": 4,
+                "Width": 362,
+                "Height": 426,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "AnimatedImage",
                     "Name": "car",
-                    "X": 59,
-                    "Y": 319,
+                    "X": 50,
+                    "Y": 259,
                     "Width": 256,
                     "Height": 144,
+                    "LockPosition": true,
                     "FileNameFirst": "car_00.png",
-                    "FileNameLast": "car_55.png",
-                    "UpdateTicksInterval": 40,
+                    "FileNameLast": "car_47.png",
+                    "UpdateTicksInterval": 75,
                     "StartOnLoad": true
                   },
                   {
                     "Type": "Image",
                     "Name": "circle",
-                    "X": 52,
-                    "Y": 310,
+                    "X": 53,
+                    "Y": 280,
                     "Width": 265,
                     "Height": 149,
+                    "LockPosition": true,
                     "RelativeFilename": "circle.png",
                     "Fadeable": true,
                     "Moveable": true
@@ -133,28 +140,31 @@
                   {
                     "Type": "Image",
                     "Name": "Image4",
-                    "X": 245,
-                    "Y": 174,
+                    "X": 253,
+                    "Y": 200,
                     "Width": 152,
                     "Height": 389,
+                    "LockPosition": true,
                     "RelativeFilename": "Vector 19.png"
                   },
                   {
                     "Type": "Image",
                     "Name": "image5",
-                    "X": -26,
-                    "Y": 151,
+                    "X": -34,
+                    "Y": 169,
                     "Width": 169,
                     "Height": 392,
+                    "LockPosition": true,
                     "RelativeFilename": "Vector 20.png"
                   },
                   {
                     "Type": "TextArea",
                     "Name": "mph_lable",
-                    "X": 109,
-                    "Y": 199,
+                    "X": 98,
+                    "Y": 149,
                     "Width": 151,
                     "Height": 28,
+                    "LockPosition": true,
                     "TextId": "__SingleUse_Z0UY",
                     "TextRotation": "0",
                     "Color": {
@@ -166,10 +176,11 @@
                   {
                     "Type": "TextArea",
                     "Name": "mph",
-                    "X": 59,
-                    "Y": 59,
+                    "X": 48,
+                    "Y": -5,
                     "Width": 250,
                     "Height": 148,
+                    "LockPosition": true,
                     "TextId": "__SingleUse_UE0S",
                     "TextRotation": "0",
                     "Color": {
@@ -190,6 +201,7 @@
                     "Y": -202,
                     "Width": 336,
                     "Height": 336,
+                    "LockPosition": true,
                     "FileNameBackground": "gauge.png",
                     "BackgroundOffsetY": -45.0,
                     "RotationCenterX": 168.0,
@@ -227,14 +239,14 @@
               {
                 "Type": "Container",
                 "Name": "tire_pres_pg",
-                "Width": 364,
-                "Height": 481,
+                "Width": 362,
+                "Height": 426,
                 "Components": [
                   {
                     "Type": "Image",
                     "Name": "tire_pre",
-                    "X": 4,
-                    "Y": 146,
+                    "X": 2,
+                    "Y": -8,
                     "Width": 364,
                     "Height": 323,
                     "RelativeFilename": "tire_pressure_1.png"
@@ -243,7 +255,7 @@
                     "Type": "TextArea",
                     "Name": "pres_fl",
                     "X": 97,
-                    "Y": 275,
+                    "Y": 115,
                     "Width": 26,
                     "Height": 20,
                     "TextId": "__SingleUse_ED0G",
@@ -262,7 +274,7 @@
                     "Type": "TextArea",
                     "Name": "pres_fr",
                     "X": 245,
-                    "Y": 275,
+                    "Y": 115,
                     "Width": 26,
                     "Height": 20,
                     "TextId": "__SingleUse_4JZO",
@@ -283,7 +295,7 @@
                     "Type": "TextArea",
                     "Name": "pres_rr",
                     "X": 246,
-                    "Y": 383,
+                    "Y": 223,
                     "Width": 26,
                     "Height": 20,
                     "TextId": "__SingleUse_BWD6",
@@ -304,7 +316,7 @@
                     "Type": "TextArea",
                     "Name": "pres_rl",
                     "X": 96,
-                    "Y": 383,
+                    "Y": 223,
                     "Width": 26,
                     "Height": 20,
                     "TextId": "__SingleUse_9P52",
@@ -322,14 +334,51 @@
                     }
                   }
                 ]
+              },
+              {
+                "Type": "Container",
+                "Name": "map_page",
+                "Width": 362,
+                "Height": 426,
+                "Components": [
+                  {
+                    "Type": "Image",
+                    "Name": "map_bg",
+                    "X": 31,
+                    "Y": -1179,
+                    "Width": 300,
+                    "Height": 1623,
+                    "RelativeFilename": "map_bg.png",
+                    "Moveable": true
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "map_mask",
+                    "X": 31,
+                    "Y": -4,
+                    "Width": 300,
+                    "Height": 440,
+                    "LockPosition": true,
+                    "RelativeFilename": "map_mask.png"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "arrow",
+                    "X": 112,
+                    "Y": 233,
+                    "Width": 150,
+                    "Height": 135,
+                    "RelativeFilename": "arrow.png"
+                  }
+                ]
               }
             ]
           },
           {
             "Type": "Slider",
             "Name": "slider1",
-            "X": 8,
-            "Y": 414,
+            "X": 2,
+            "Y": 438,
             "Width": 232,
             "Height": 32,
             "IsHorizontalSlider": true,
@@ -398,7 +447,7 @@
               "Type": "ActionFade",
               "Easing": "Linear",
               "EasingOption": "In",
-              "Duration": 500,
+              "Duration": 1000,
               "ActionComponent": "gauge1"
             }
           },
@@ -480,8 +529,8 @@
                     "FileNameBackground": "temp_bg.png",
                     "IndicatorPositionWidth": 163,
                     "IndicatorPositionHeight": 388,
-                    "ProgressRangeMax": 100,
-                    "ProgressInitialValue": 63,
+                    "ProgressRangeMax": 200,
+                    "ProgressInitialValue": 100,
                     "Fadeable": true
                   },
                   {

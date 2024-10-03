@@ -10,14 +10,16 @@ void graphing_ScreenView::setupScreen()
 {
     graphing_ScreenViewBase::setupScreen();
     currentIntro = INTRO_NONE;
-    gauge1.setValue(map_float(0,0.0,200.0,16.0,92.0)); 
-    gauge1.setAlpha(0);
+    // not using this guage anymore, leaving it here because it was hard work and dont want to delete it
+    // gauge1.setValue(map_float(0,0.0,200.0,16.0,92.0)); 
+    // gauge1.setAlpha(0);
+    // sets alpha all elements in the right container
     right_container1.setAlpha(0);
     battery_level.setAlpha(0);
     circle.setAlpha(0);
     background.setAlpha(0);
     //invalidate all 3
-    gauge1.invalidate();
+    //gauge1.invalidate();
     circle.invalidate();
     background.invalidate();
     battery_level.invalidate();
@@ -40,15 +42,15 @@ float graphing_ScreenView::map_float(float x, float in_min, float in_max, float 
 //------------------------------------------------------------------------------------------------
 void graphing_ScreenView::sliderValueChanged(int value)
 {
-    uint16_t speed = value;
+    speed = value;
     Unicode::snprintf(mphBuffer, 10, "%d", (int)speed);
     touchgfx::colortype slowColor = touchgfx::Color::getColorFromRGB(102,102,102);
     touchgfx::colortype mediumColor = touchgfx::Color::getColorFromRGB(0,126,0);
     touchgfx::colortype fastColor = touchgfx::Color::getColorFromRGB(200,0,0);
     // map image and gauge values are not 1:1 so we need to map the speed to the gauge value
-    gauge1.setValue(map_float(speed,0.0,210.0,16.0,92.0)); 
-    battery_level.setValue(speed);
-    right_container1.setTempProgressValue(speed);
+   // not using this guage anymore, leaving it here because it was hard work and dont want to delete it
+   // gauge1.setValue(map_float(speed,0.0,210.0,16.0,92.0)); 
+
     right_container1.setLeftGaugeValue(speed);
     // MPH Color depending on speed
     if(speed < 80){
@@ -59,8 +61,8 @@ void graphing_ScreenView::sliderValueChanged(int value)
     }
     else{
         mph.setColor(fastColor);
-    }
-
+    }               
+    
     // for redraw of widgets
     mph.invalidate();
     gauge1.invalidate();
@@ -74,6 +76,50 @@ void graphing_ScreenView::handleTickEvent()
         runIntros();
     }
     updateClock();
+    updateMap();
+    // Update battery and temperature levels every 2 second
+    if (tickCounter % 120 == 0 && speed > 0) // Assuming 60 ticks per second
+    {
+        int tempScaleFactor = ((int)speed * 0.2);
+        // Update the battery_level UI element, get value and subtract 1, inline
+        
+        battery_level.setValue(battery_level.getValue() - 1 -  ((int)speed * 0.01));
+        
+        battery_level.invalidate();
+        // Update the temperature UI element, get value and add 1, inline
+        if(right_container1.getTempProgressValue() + 1 + tempScaleFactor)
+            right_container1.setTempProgressValue(100);
+        else
+            right_container1.setTempProgressValue(right_container1.getTempProgressValue() + 1 + tempScaleFactor);
+        
+    }
+    // recharge when speed is zero , this is a super super charger lol
+    else if(tickCounter % 60 && speed == 0 && battery_level.getValue() < 100){
+        battery_level.setValue(battery_level.getValue() + 1);
+        battery_level.invalidate();
+    }
+}
+void graphing_ScreenView::updateMap()
+{
+    static int mapOriginalY = map_bg.getY();
+  
+    // Update the map every 5 seconds
+    if(main_container.getSelectedPage() == 2 && tickCounter % 10 == 0)
+    {
+        // check if map is at the bottom
+        if(map_bg.getY() > 0)
+        {
+            // reset map to top
+            map_bg.setXY(map_bg.getX(), mapOriginalY);
+            map_bg.invalidate();
+        }
+        // map_bg.setXY(map_bg.getX(), map_bg.getY() + 1 + ((int)(speed*0.1)));
+        // map_bg.invalidate();
+        // use move animator
+        map_bg.clearMoveAnimationEndedAction();
+        map_bg.startMoveAnimation(map_bg.getX(), map_bg.getY() + 1 + ((int)(speed*0.05)), 10);
+
+    }
 }
 //------------------------------------------------------------------------------------------------
 void graphing_ScreenView::updateClock()
@@ -111,11 +157,12 @@ void graphing_ScreenView::runIntros()
     {
 
     case INTRO_ELEMENTS:
-        if(incr <=255)
+        if(incr <=203)
         {
             right_container1.setAlpha(incr);
             battery_level.setAlpha(incr);
             circle.setAlpha(incr);
+
             right_container1.invalidate();
             battery_level.invalidate();
             circle.invalidate();
@@ -131,8 +178,11 @@ void graphing_ScreenView::runIntros()
         if((incr < 210))
         {
             //gauge1.setValue(gaugeVal);
-            gauge1.setValue(map_float((float)incr,0.0,200.0,16.0,92.0));
-            incr+=10;
+            right_container1.setLeftGaugeValue(incr);
+            battery_level.setValue(incr);
+            right_container1.setTempProgressValue(incr);
+            battery_level.invalidate();
+            incr+=5;
         }
         else
         {
@@ -145,14 +195,18 @@ void graphing_ScreenView::runIntros()
         if((incr > 0))
         {
             //gauge1.setValue(gaugeVal);
-            gauge1.setValue(map_float((float)incr,0.0,200.0,16.0,92.0));
-            incr-=10;
+            right_container1.setLeftGaugeValue(incr);
+            battery_level.setValue(incr);
+            right_container1.setTempProgressValue(incr);
+            battery_level.invalidate();
+            incr-=5;
         }
         else
         {
-            gauge1.setValue(map_float(0.0,0.0,200.0,16.0,92.0));
+            right_container1.setLeftGaugeValue(incr);
             currentIntro = INTRO_NONE;
-           
+            battery_level.setValue(100); 
+            right_container1.setTempProgressValue(50);
         }
         break;
     

@@ -18,12 +18,6 @@ enum IntroType {
 class graphing_ScreenView : public graphing_ScreenViewBase
 {
 public:
-    uint32_t tickCounter;
-    volatile uint8_t playIntro = 0;
-    int digitalHours;
-    int digitalMinutes;
-    int digitalSeconds;
-    IntroType currentIntro = INTRO_NONE;
     graphing_ScreenView();
     virtual ~graphing_ScreenView() {}
     virtual void setupScreen();
@@ -34,7 +28,17 @@ public:
     virtual void runIntros();
     virtual void updateClock();
     virtual void backGroundAnimationDone();
+    virtual void updateMap();
 protected:
+    uint32_t tickCounter;
+    volatile uint8_t playIntro = 0;
+    int digitalHours;
+    int digitalMinutes;
+    int digitalSeconds;
+    IntroType currentIntro = INTRO_NONE;
+    uint16_t speed;
+    float batteryLevel;
+    float temperatureLevel;
 };
 
 #endif // GRAPHING_SCREENVIEW_HPP
