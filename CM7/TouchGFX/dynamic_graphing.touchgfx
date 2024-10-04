@@ -87,7 +87,8 @@
             "Width": 800,
             "Height": 480,
             "LockPosition": true,
-            "RelativeFilename": "BACKGROUND.png"
+            "RelativeFilename": "BACKGROUND.png",
+            "Alpha": 104
           },
           {
             "Type": "SwipeContainer",
@@ -233,6 +234,51 @@
                     "ArcRadius": 137.0,
                     "ArcLineWidth": 136.0,
                     "ArcCapStyle": "Butt"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "drive",
+                    "X": 86,
+                    "Y": 194,
+                    "Width": 198,
+                    "Height": 50,
+                    "RelativeFilename": "drive.png",
+                    "Alpha": 0,
+                    "Clickable": true,
+                    "Fadeable": true
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "park",
+                    "X": 86,
+                    "Y": 194,
+                    "Width": 198,
+                    "Height": 50,
+                    "RelativeFilename": "park.png",
+                    "Clickable": true,
+                    "Fadeable": true
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "reverse",
+                    "X": 86,
+                    "Y": 194,
+                    "Width": 198,
+                    "Height": 50,
+                    "RelativeFilename": "reverse.png",
+                    "Alpha": 0,
+                    "Fadeable": true
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "neutral",
+                    "X": 86,
+                    "Y": 194,
+                    "Width": 198,
+                    "Height": 50,
+                    "RelativeFilename": "neutral.png",
+                    "Alpha": 0,
+                    "Fadeable": true
                   }
                 ]
               },
@@ -256,8 +302,8 @@
                     "Name": "pres_fl",
                     "X": 97,
                     "Y": 115,
-                    "Width": 26,
-                    "Height": 20,
+                    "Width": 22,
+                    "Height": 18,
                     "TextId": "__SingleUse_ED0G",
                     "TextRotation": "0",
                     "Color": {
@@ -275,8 +321,8 @@
                     "Name": "pres_fr",
                     "X": 245,
                     "Y": 115,
-                    "Width": 26,
-                    "Height": 20,
+                    "Width": 22,
+                    "Height": 18,
                     "TextId": "__SingleUse_4JZO",
                     "TextRotation": "0",
                     "Color": {
@@ -296,8 +342,8 @@
                     "Name": "pres_rr",
                     "X": 246,
                     "Y": 223,
-                    "Width": 26,
-                    "Height": 20,
+                    "Width": 22,
+                    "Height": 18,
                     "TextId": "__SingleUse_BWD6",
                     "TextRotation": "0",
                     "Color": {
@@ -317,8 +363,8 @@
                     "Name": "pres_rl",
                     "X": 96,
                     "Y": 223,
-                    "Width": 26,
-                    "Height": 20,
+                    "Width": 22,
+                    "Height": 18,
                     "TextId": "__SingleUse_9P52",
                     "TextRotation": "0",
                     "Color": {
@@ -340,6 +386,7 @@
                 "Name": "map_page",
                 "Width": 362,
                 "Height": 426,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Image",
@@ -348,6 +395,7 @@
                     "Y": -1179,
                     "Width": 300,
                     "Height": 1623,
+                    "LockPosition": true,
                     "RelativeFilename": "map_bg.png",
                     "Moveable": true
                   },
@@ -355,19 +403,20 @@
                     "Type": "Image",
                     "Name": "map_mask",
                     "X": 31,
-                    "Y": -4,
+                    "Y": -43,
                     "Width": 300,
-                    "Height": 440,
+                    "Height": 480,
                     "LockPosition": true,
                     "RelativeFilename": "map_mask.png"
                   },
                   {
                     "Type": "Image",
                     "Name": "arrow",
-                    "X": 112,
-                    "Y": 233,
-                    "Width": 150,
-                    "Height": 135,
+                    "X": 121,
+                    "Y": 219,
+                    "Width": 125,
+                    "Height": 125,
+                    "LockPosition": true,
                     "RelativeFilename": "arrow.png"
                   }
                 ]
@@ -460,6 +509,7 @@
             },
             "Action": {
               "Type": "ActionFade",
+              "Alpha": 150,
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 250,

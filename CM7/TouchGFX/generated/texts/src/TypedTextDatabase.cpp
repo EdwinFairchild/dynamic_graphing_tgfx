@@ -5,13 +5,13 @@
 #include <fonts/GeneratedFont.hpp>
 #include <texts/TypedTextDatabase.hpp>
 
-extern touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
+extern touchgfx::GeneratedFont& getFont_verdana_18_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_41_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_10_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_132_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
-    &(getFont_verdana_20_4bpp()),
+    &(getFont_verdana_18_4bpp()),
     &(getFont_verdana_41_4bpp()),
     &(getFont_verdana_10_4bpp()),
     &(getFont_verdana_132_4bpp())
@@ -73,7 +73,7 @@ void resetFont(touchgfx::FontId fontId)
     switch (fontId)
     {
     case 0:
-        touchgfx_fonts[0] = &(getFont_verdana_20_4bpp());
+        touchgfx_fonts[0] = &(getFont_verdana_18_4bpp());
         break;
     case 1:
         touchgfx_fonts[1] = &(getFont_verdana_41_4bpp());

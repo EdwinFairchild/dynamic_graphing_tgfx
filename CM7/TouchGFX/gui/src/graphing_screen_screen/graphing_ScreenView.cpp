@@ -2,8 +2,8 @@
 #define WIDTH  100  // Width of the square image
 #define HEIGHT 100  // Height of the square image
 graphing_ScreenView::graphing_ScreenView()
+    : parkClickedCallBack(this, &graphing_ScreenView::parkClickedHandler)
 {
-
 }
 //------------------------------------------------------------------------------------------------
 void graphing_ScreenView::setupScreen()
@@ -18,16 +18,25 @@ void graphing_ScreenView::setupScreen()
     battery_level.setAlpha(0);
     circle.setAlpha(0);
     background.setAlpha(0);
+    park.setAlpha(0);
+    mph.setAlpha(0);
+    mph_lable.setAlpha(0);
     //invalidate all 3
     //gauge1.invalidate();
     circle.invalidate();
     background.invalidate();
     battery_level.invalidate();
     right_container1.invalidate();
+    park.invalidate();
+    mph.invalidate();
+    mph_lable.invalidate();
 
     digitalHours = digitalClock1.getCurrentHour();
     digitalMinutes = digitalClock1.getCurrentMinute();
     digitalSeconds = digitalClock1.getCurrentSecond();
+
+    park.setClickAction(parkClickedCallBack);
+    drive.setClickAction(parkClickedCallBack);
 
 }
 //------------------------------------------------------------------------------------------------
@@ -162,10 +171,16 @@ void graphing_ScreenView::runIntros()
             right_container1.setAlpha(incr);
             battery_level.setAlpha(incr);
             circle.setAlpha(incr);
+            park.setAlpha(incr);
+            mph.setAlpha(incr);
+            mph_lable.setAlpha(incr);
 
             right_container1.invalidate();
             battery_level.invalidate();
             circle.invalidate();
+            park.invalidate();
+            mph.invalidate();
+            mph_lable.invalidate();
             incr+=5;
         }
         else
@@ -207,10 +222,30 @@ void graphing_ScreenView::runIntros()
             currentIntro = INTRO_NONE;
             battery_level.setValue(100); 
             right_container1.setTempProgressValue(50);
+            
         }
         break;
     
     default:
         break;
+    }
+}
+void graphing_ScreenView::parkClickedHandler(const FadeAnimator<Image>& b, const ClickEvent& e)
+{
+    if (&b == &park) 
+    {
+        //Implement what should happen when 'box' is touched/clicked here.
+        park.clearFadeAnimationEndedAction();
+        park.startFadeAnimation(0, 30);
+        drive.clearFadeAnimationEndedAction();
+        drive.startFadeAnimation(255, 30);
+    }
+    else if (&b == &drive)
+    {
+        //Implement what should happen when 'box' is touched/clicked here.
+        drive.clearFadeAnimationEndedAction();
+        drive.startFadeAnimation(0, 30);
+        park.clearFadeAnimationEndedAction();
+        park.startFadeAnimation(255, 30);
     }
 }

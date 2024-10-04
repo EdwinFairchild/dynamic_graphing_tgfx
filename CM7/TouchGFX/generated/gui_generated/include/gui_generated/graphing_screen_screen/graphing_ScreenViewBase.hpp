@@ -19,6 +19,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
+#include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/containers/Slider.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
@@ -66,6 +67,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard mph;
     touchgfx::FadeAnimator< touchgfx::Gauge > gauge1;
     touchgfx::PainterRGB888Bitmap gauge1Painter;
+    touchgfx::ClickListener< touchgfx::FadeAnimator< touchgfx::Image > > drive;
+    touchgfx::ClickListener< touchgfx::FadeAnimator< touchgfx::Image > > park;
+    touchgfx::FadeAnimator< touchgfx::Image > reverse;
+    touchgfx::FadeAnimator< touchgfx::Image > neutral;
     touchgfx::Container tire_pres_pg;
     touchgfx::Image tire_pre;
     touchgfx::TextAreaWithOneWildcard pres_fl;

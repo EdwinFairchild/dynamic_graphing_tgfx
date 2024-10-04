@@ -29,6 +29,7 @@ public:
     virtual void updateClock();
     virtual void backGroundAnimationDone();
     virtual void updateMap();
+    void parkClickedHandler(const FadeAnimator<Image>& b, const ClickEvent& e);
 protected:
     uint32_t tickCounter;
     volatile uint8_t playIntro = 0;
@@ -39,6 +40,9 @@ protected:
     uint16_t speed;
     float batteryLevel;
     float temperatureLevel;
+
+    Callback<graphing_ScreenView, const FadeAnimator<Image>&, const ClickEvent&> parkClickedCallBack;
+
 };
 
 #endif // GRAPHING_SCREENVIEW_HPP

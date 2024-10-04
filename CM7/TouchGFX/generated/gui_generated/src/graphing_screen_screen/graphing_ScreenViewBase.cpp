@@ -32,6 +32,7 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
 
     background.setXY(0, 0);
     background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
+    background.setAlpha(104);
     add(background);
 
     main_container.setXY(221, 44);
@@ -94,6 +95,25 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     gauge1.setArcPosition(33, 33, 270, 198);
     car_container.add(gauge1);
 
+    drive.setXY(86, 194);
+    drive.setBitmap(touchgfx::Bitmap(BITMAP_DRIVE_ID));
+    drive.setAlpha(0);
+    car_container.add(drive);
+
+    park.setXY(86, 194);
+    park.setBitmap(touchgfx::Bitmap(BITMAP_PARK_ID));
+    car_container.add(park);
+
+    reverse.setXY(86, 194);
+    reverse.setBitmap(touchgfx::Bitmap(BITMAP_REVERSE_ID));
+    reverse.setAlpha(0);
+    car_container.add(reverse);
+
+    neutral.setXY(86, 194);
+    neutral.setBitmap(touchgfx::Bitmap(BITMAP_NEUTRAL_ID));
+    neutral.setAlpha(0);
+    car_container.add(neutral);
+
     main_container.add(car_container);
 
     tire_pres_pg.setWidth(362);
@@ -146,11 +166,11 @@ graphing_ScreenViewBase::graphing_ScreenViewBase() :
     map_bg.setBitmap(touchgfx::Bitmap(BITMAP_MAP_BG_ID));
     map_page.add(map_bg);
 
-    map_mask.setXY(31, -4);
+    map_mask.setXY(31, -43);
     map_mask.setBitmap(touchgfx::Bitmap(BITMAP_MAP_MASK_ID));
     map_page.add(map_mask);
 
-    arrow.setXY(112, 233);
+    arrow.setXY(121, 219);
     arrow.setBitmap(touchgfx::Bitmap(BITMAP_ARROW_ID));
     map_page.add(arrow);
 
@@ -227,9 +247,9 @@ void graphing_ScreenViewBase::interaction2EndedCallbackHandler(const touchgfx::F
 {
     //Interaction3
     //When Interaction2 completed fade background
-    //Fade background to alpha:255 with LinearIn easing in 250 ms (15 Ticks)
+    //Fade background to alpha:150 with LinearIn easing in 250 ms (15 Ticks)
     background.clearFadeAnimationEndedAction();
-    background.startFadeAnimation(255, 15, touchgfx::EasingEquations::linearEaseIn);
+    background.startFadeAnimation(150, 15, touchgfx::EasingEquations::linearEaseIn);
     background.setFadeAnimationEndedAction(interaction3EndedCallback);
 
 }
